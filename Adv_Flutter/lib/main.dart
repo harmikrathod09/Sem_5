@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:madf/Lab2/ecommerce.dart';
+import 'package:madf/Lab2/form.dart';
+
+import 'Lab2/fav.dart';
+import 'Lab2/profilecard.dart';
+import 'Lab2/validation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +36,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  EcommerceDashboard(),
     );
   }
 }
