@@ -38,7 +38,6 @@ class _CounterviewState extends State<Counterview> {
                   },
                   child: Text(DECREMENT),
                 ),
-
               ],
             ),
           ],
