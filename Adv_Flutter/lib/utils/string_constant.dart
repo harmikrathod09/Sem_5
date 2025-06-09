@@ -1,5 +1,6 @@
 //region appbar string const
 const String CRUDLISTMAPAPPBAR="Crud List of Map";
+const String CRUDDATABASEAPPBAR="Crud Database";
 //endregion
 
 //region FORM STRING
@@ -23,4 +24,14 @@ const String USERGENDER="Gender";
 
 //region USER TITLE
 const String DISPLAYUSER="Display User";
+//endregion
+
+//region DATABASE CONSTANT
+const String DBNAME="User_DB.db";
+const String DBTABLENAME="table_user";
+const String DBID="id";
+const String DBUSERNAME="Name";
+const String DBGENDER="Gender";
+const String DBCITY="City";
+const int DBVERSION=1;
 //endregion

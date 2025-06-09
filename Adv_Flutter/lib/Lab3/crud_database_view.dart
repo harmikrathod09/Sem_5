@@ -1,20 +1,23 @@
+import 'package:madf/Lab3/crud_database_controller.dart';
 import 'package:madf/utils/import_export.dart';
 
-class CrudListMapView extends StatefulWidget {
-  const CrudListMapView({super.key});
+class CrudDatabaseView extends StatefulWidget {
+  const CrudDatabaseView({super.key});
 
   @override
-  State<CrudListMapView> createState() => _CrudListMapViewState();
+  State<CrudDatabaseView> createState() => _CrudDatabaseViewState();
 }
 
-class _CrudListMapViewState extends State<CrudListMapView> {
+class _CrudDatabaseViewState extends State<CrudDatabaseView> {
   TextEditingController _nameController = TextEditingController();
   String _selectedCity = "Ahmedabad";
-  String _selectedGender = GENEDERMALE;
+  String _selectedGender = "Male";
 
-  int? _editingIndex = -1;
+  int _selectedID=-1;
 
-  ControllerCrudListMap _userCRUD = ControllerCrudListMap();
+  List<Map<String, dynamic>> _userList = [];
+
+  ControllerDatabaseCRUD _contrller = ControllerDatabaseCRUD();
 
   List<String> city = [
     "Ahmedabad",
@@ -25,20 +28,22 @@ class _CrudListMapViewState extends State<CrudListMapView> {
     "Jamnagar",
   ];
 
-  List<Map<String, dynamic>> _userList = [];
-
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    _userList = _userCRUD.readUser();
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    _userList = await _contrller.readUserDatabase();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(CRUDLISTMAPAPPBAR, style: TextStyle(color: Colors.white)),
+        title: Text(CRUDDATABASEAPPBAR, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
       body: Padding(
@@ -95,32 +100,28 @@ class _CrudListMapViewState extends State<CrudListMapView> {
             ElevatedButton(
               onPressed: () {
                 Map<String, dynamic> user = {
-                  USERNAME: _nameController.text,
-                  USERCITY: _selectedCity,
-                  USERGENDER: _selectedGender,
+                  DBNAME: _nameController.text,
+                  DBCITY: _selectedCity,
+                  DBGENDER: _selectedGender,
                 };
-
-                if (_editingIndex == -1) {
-                  _userCRUD.addUser(user);
-                } else {
-                  _userCRUD.updateUser(user, _editingIndex!);
-                  _editingIndex = -1;
+                if(_selectedID==-1){
+                  _contrller.addUserDatabase(user);
                 }
-
-                setState(() {
+                else{
+                  _contrller.updateuserDatabase(user,_selectedID);
+                }
+                setState(() async {
                   _nameController.clear();
                   _selectedCity = city[0]; // default city
                   _selectedGender = GENEDERMALE; // default gender
-                  _editingIndex = -1;
-                  _userList = _userCRUD.readUser();
+                  _selectedID = -1;
+                  _userList =await _contrller.readUserDatabase();
                 });
               },
               child: Text(BTNSUBMIT),
             ),
 
-            SizedBox(height: 20),
-
-            Text(DISPLAYUSER, style: TextStyle(height: 5)),
+            SizedBox(height: 15),
 
             Expanded(
               child: ListView.builder(
@@ -128,31 +129,27 @@ class _CrudListMapViewState extends State<CrudListMapView> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text("$USERNAME : ${_userList[index][USERNAME]}"),
+                      title: Text("$DBNAME : ${_userList[index][DBUSERNAME]}"),
                       subtitle: Text(
-                        "$USERCITY : ${_userList[index][USERCITY]} \n$USERGENDER : ${_userList[index][USERGENDER]}",
+                        "$DBCITY: ${_userList[index][DBCITY]} \n$DBGENDER : ${_userList[index][DBGENDER]}",
                       ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          IconButton(onPressed: () {
+                            setState(() {
+                              _nameController.text =
+                              _userList[index][DBNAME];
+                              _selectedCity = _userList[index][DBCITY];
+                              _selectedGender = _userList[index][DBGENDER];
+                              _selectedID= _userList[index][DBID];
+                            });
+                          }, icon: Icon(Icons.edit)),
                           IconButton(
                             onPressed: () {
-                              setState(() {
-                                _nameController.text =
-                                    _userList[index][USERNAME];
-                                _selectedCity = _userList[index][USERCITY];
-                                _selectedGender = _userList[index][USERGENDER];
-                                _editingIndex = index;
-                              });
-                            },
-                            icon: Icon(Icons.edit),
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              _userCRUD.removeUser(index);
-                              setState(() {
-                                _userList = _userCRUD.readUser();
-                              });
+                              _contrller.removeUserDatabase(
+                                _userList[index][DBID],
+                              );
                             },
                             icon: Icon(Icons.delete),
                           ),
