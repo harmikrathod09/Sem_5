@@ -13,11 +13,11 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
   String _selectedCity = "Ahmedabad";
   String _selectedGender = "Male";
 
-  int _selectedID=-1;
+  int _selectedID = -1;
 
   List<Map<String, dynamic>> _userList = [];
 
-  ControllerDatabaseCRUD _contrller = ControllerDatabaseCRUD();
+  ControllerDatabaseCRUD _controller = ControllerDatabaseCRUD();  // fixed typo
 
   List<String> city = [
     "Ahmedabad",
@@ -35,7 +35,7 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
   }
 
   Future<void> _loadData() async {
-    _userList = await _contrller.readUserDatabase();
+    _userList = await _controller.readUserDatabase();
     setState(() {});
   }
 
@@ -57,10 +57,9 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
             SizedBox(height: 10),
             DropdownButton(
               value: _selectedCity,
-              items:
-                  city.map((String items) {
-                    return DropdownMenuItem(value: items, child: Text(items));
-                  }).toList(),
+              items: city.map((String items) {
+                return DropdownMenuItem(value: items, child: Text(items));
+              }).toList(),
               onChanged: (String? newValue) {
                 setState(() {
                   _selectedCity = newValue!;
@@ -98,25 +97,26 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 Map<String, dynamic> user = {
-                  DBNAME: _nameController.text,
+                  DBUSERNAME: _nameController.text,  // fixed key
                   DBCITY: _selectedCity,
                   DBGENDER: _selectedGender,
                 };
-                if(_selectedID==-1){
-                  _contrller.addUserDatabase(user);
+
+                if (_selectedID != -1) {
+                  await _controller.updateUserDatabase(user, _selectedID);  // added await
+                } else {
+                  await _controller.addUserDatabase(user);  // added await
                 }
-                else{
-                  _contrller.updateuserDatabase(user,_selectedID);
-                }
-                setState(() async {
-                  _nameController.clear();
-                  _selectedCity = city[0]; // default city
-                  _selectedGender = GENEDERMALE; // default gender
-                  _selectedID = -1;
-                  _userList =await _contrller.readUserDatabase();
-                });
+
+                _nameController.clear();
+                _selectedCity = city[0]; // default city
+                _selectedGender = GENEDERMALE; // default gender
+                _selectedID = -1;
+
+                _userList = await _controller.readUserDatabase();
+                setState(() {});
               },
               child: Text(BTNSUBMIT),
             ),
@@ -129,27 +129,32 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text("$DBNAME : ${_userList[index][DBUSERNAME]}"),
+                      title: Text("$DBUSERNAME : ${_userList[index][DBUSERNAME]}"),  // fixed key
                       subtitle: Text(
                         "$DBCITY: ${_userList[index][DBCITY]} \n$DBGENDER : ${_userList[index][DBGENDER]}",
                       ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          IconButton(onPressed: () {
-                            setState(() {
-                              _nameController.text =
-                              _userList[index][DBNAME];
-                              _selectedCity = _userList[index][DBCITY];
-                              _selectedGender = _userList[index][DBGENDER];
-                              _selectedID= _userList[index][DBID];
-                            });
-                          }, icon: Icon(Icons.edit)),
                           IconButton(
                             onPressed: () {
-                              _contrller.removeUserDatabase(
+                              setState(() {
+                                _nameController.text =
+                                _userList[index][DBUSERNAME];  // fixed key
+                                _selectedCity = _userList[index][DBCITY];
+                                _selectedGender = _userList[index][DBGENDER];
+                                _selectedID = _userList[index][DBID];
+                              });
+                            },
+                            icon: Icon(Icons.edit),
+                          ),
+                          IconButton(
+                            onPressed: () async {
+                              await _controller.removeUserDatabase(
                                 _userList[index][DBID],
                               );
+                              _userList = await _controller.readUserDatabase();  // refresh after delete
+                              setState(() {});
                             },
                             icon: Icon(Icons.delete),
                           ),

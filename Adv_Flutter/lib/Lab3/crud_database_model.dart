@@ -2,24 +2,25 @@ import 'package:madf/utils/import_export.dart';
 
 class ModelClassDatabaseCRUD {
   Future<Database> initDatabase() async {
-    String _path = join(await getDatabasesPath(), DBNAME);
+    String path = join(await getDatabasesPath(), DBNAME);
     return openDatabase(
-      _path,
+      path,
       version: DBVERSION,
       onCreate: (db, version) {
         db.execute(
           "CREATE TABLE $DBTABLENAME("
-          "$DBID INTERGER PRIMARY KEY AUTOINCREMENT,"
-          "$DBUSERNAME TEXT,"
-          "$DBCITY TEXT,"
-          "$DBGENDER TEXT"
-          ")",
+              "$DBID INTEGER PRIMARY KEY AUTOINCREMENT,"
+              "$DBUSERNAME TEXT,"
+              "$DBCITY TEXT,"
+              "$DBGENDER TEXT"
+              ")",
         );
       },
     );
   }
 
   Future<int> addUserDatabase(Map<String, dynamic> user) async {
+
     final db = await initDatabase();
     return await db.insert(DBTABLENAME, user);
   }
@@ -34,7 +35,7 @@ class ModelClassDatabaseCRUD {
     return await db.delete(DBTABLENAME, where: "$DBID=?", whereArgs: [id]);
   }
 
-  Future<int> updateUserDatebase(user, id) async {
+  Future<int>   updateUserDatebase(user, id) async {
     final db = await initDatabase();
     return await db.update(
       DBTABLENAME,
