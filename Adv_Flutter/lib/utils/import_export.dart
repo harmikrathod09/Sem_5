@@ -9,3 +9,5 @@ export 'package:madf/Lab3/crud_database_model.dart';
 export 'package:madf/Lab3/crud_database_controller.dart';
 export 'package:madf/Lab3/crud_database_view.dart';
 export 'package:flutter_social_button/flutter_social_button.dart';
+export 'package:image_picker/image_picker.dart';
+export 'dart:io';

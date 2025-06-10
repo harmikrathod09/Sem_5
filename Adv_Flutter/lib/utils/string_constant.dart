@@ -1,62 +1,68 @@
 //region appbar string const
-const String PROFILECARDAPPBAR="Profile Card Form";
-const String CRUDLISTMAPAPPBAR="Crud List of Map";
-const String CRUDDATABASEAPPBAR="Crud Database";
+const String PROFILE_CARD_APPBAR="Profile Card Form";
+const String CRUD_LIST_MAP_APPBAR="Crud List of Map";
+const String CRUD_DATABASE_APPBAR="Crud Database";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
-const String PCENTERFNAME = "Enter a First Name";
-const String PCENTERLNAME = "Enter a Last Name";
-const String PCENTEREMAIL = "Enter a Email";
-const String PCENTERMONO = "Enter a Mobile No.";
-const String PCENTERROLL = "Enter a Roll";
-const String PCENTEREXPERIENCE = "Enter a Experiance";
-const String PCENTERINSTAURL = "Enter a Instagram URL";
-const String PCENTERLINKEDINURL = "Enter a LinkedIn URL";
-const String PCENTERGITURL = "Enter a Git URL";
+const String PC_ENTER_FNAME = "Enter a First Name";
+const String PC_ENTER_LNAME = "Enter a Last Name";
+const String PC_ENTER_EMAIL = "Enter a Email";
+const String PC_ENTERMO_NO = "Enter a Mobile No.";
+const String PC_ENTER_ROLL = "Enter a Roll";
+const String PC_ENTER_EXPERIENCE = "Enter a Experiance";
+const String PC_ENTER_INSTA_URL = "Enter a Instagram URL";
+const String PC_ENTER_LINKEDIN_URL = "Enter a LinkedIn URL";
+const String PC_ENTER_GIT_URL = "Enter a Git URL";
+//endregion
+
+//region PROFILECARD TITLE
+const String PERSONAL_INFORMATION="Personal Information";
+const String PROFESSIONAL_INFORMATION="Professional Information";
+const String SOCIAL_MEDIA="Social Media";
 //endregion
 
 //region PROFILECARD LABLE TEXT FORM CONSTANT
-const String PCLABLEFNAME = "First Name";
-const String PCLABLELNAME = "Last Name";
-const String PCLABELEMAIL = "Email";
-const String PCLABELMONO = "Mobile No.";
-const String PCLABELROLL = "Roll";
-const String PCLABELEXPERIENCE = "Experiance";
-const String PCLABELINSTAURL = "Instagram URL";
-const String PCLABELLINKEDINURL = "LinkedIn URL";
-const String PCLABELGITURL = "Git URL";
+const String PC_LABLE_FNAME = "First Name";
+const String PC_LABLE_LNAME = "Last Name";
+const String PC_LABEL_EMAIL = "Email";
+const String PC_LABEL_MO_NO = "Mobile No.";
+const String PC_LABEL_ROLL = "Roll";
+const String PC_LABEL_EXPERIENCE = "Experiance";
+const String PC_LABEL_INSTA_URL = "Instagram URL";
+const String PC_LABEL_LINKEDIN_URL = "LinkedIn URL";
+const String PC_LABEL_GIT_URL = "Git URL";
 //endregion
 
 //region FORM STRING
-const String ENTERNAMEFIELDTEXT="Enter a Name";
+const String ENTER_NAME_FIELDTEXT="Enter a Name";
 //endregion
 
 //region GENDER
-const String GENEDERMALE="Male";
-const String GENEDERFEMALE="Female";
+const String GENEDER_MALE="Male";
+const String GENEDER_FEMALE="Female";
 //endregion
 
 //region BUTTON
-const String BTNSUBMIT="Submit";
+const String BTN_SUBMIT="Submit";
 //endregion
 
 //region USER MAP
-const String USERNAME="Name";
-const String USERCITY="City";
-const String USERGENDER="Gender";
+const String USER_NAME="Name";
+const String USER_CITY="City";
+const String USER_GENDER="Gender";
 //endregion
 
 //region USER TITLE
-const String DISPLAYUSER="Display User";
+const String DISPLAY_USER="Display User";
 //endregion
 
 //region DATABASE CONSTANT
-const String DBNAME="User_DB.db";
-const String DBTABLENAME="table_user";
-const String DBID="UID";
-const String DBUSERNAME="Name";
-const String DBGENDER="Gender";
-const String DBCITY="City";
-const int DBVERSION=1;
+const String DB_NAME="User_DB.db";
+const String DB_TABLE_NAME="table_user";
+const String DB_ID="UID";
+const String DB_USER_NAME="Name";
+const String DB_GENDER="Gender";
+const String DB_CITY="City";
+const int DB_VERSION=1;
 //endregion

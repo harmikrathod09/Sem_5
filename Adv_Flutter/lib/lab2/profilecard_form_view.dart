@@ -19,75 +19,130 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
   TextEditingController _linkedinURLController = TextEditingController();
   TextEditingController _gitURLController = TextEditingController();
 
-  CommonWidget _widget = CommonWidget();
+  final ImagePicker _picker = ImagePicker();
+  File? _selectedImage;
 
+
+  CommonWidget _widget = CommonWidget();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(PROFILECARDAPPBAR, style: TextStyle(color: Colors.white)),
+        title: Text(PROFILE_CARD_APPBAR, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: _widget.textField(
-                    _fnameController,
-                    PCENTERFNAME,
-                    PCLABLEFNAME,
-                  ),
-                ),
-                SizedBox(width: 5),
-                Expanded(
-                  child: _widget.textField(
-                    _lnameController,
-                    PCENTERLNAME,
-                    PCLABLELNAME,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            _widget.textField(_emailController, PCENTEREMAIL, PCENTEREMAIL),
-            SizedBox(height: 10),
-            _widget.textField(_mobileController, PCENTERMONO, PCLABELMONO),
-            SizedBox(height: 10),
-            _widget.textField(_emailController, PCENTEREMAIL, PCLABELEMAIL),
-            SizedBox(height: 10),
-            _widget.textField(_rollController, PCENTERROLL, PCLABELROLL),
-            SizedBox(height: 10),
-            _widget.textField(
-              _experianceController,
-              PCENTEREXPERIENCE,
-              PCLABELEXPERIENCE,
-            ),
-            SizedBox(height: 10),
-            _widget.textField(
-              _instaURLController,
-              PCENTERINSTAURL,
-              PCLABELINSTAURL,
-            ),
-            SizedBox(height: 10),
-            _widget.textField(
-              _linkedinURLController,
-              PCENTERLINKEDINURL,
-              PCLABELLINKEDINURL,
-            ),
-            SizedBox(height: 10),
-            _widget.textField(
-              _gitURLController,
-              PCENTERGITURL,
-              PCLABELGITURL,
-            ),
-            SizedBox(height: 15),
-            OutlinedButton(onPressed: () {
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
 
-            }, child: Text(BTNSUBMIT)),
-          ],
+
+              SizedBox(height: 10,),
+              Card(
+                elevation: 4,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      _widget.titleText(PERSONAL_INFORMATION),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _widget.textField(
+                              _fnameController,
+                              PC_ENTER_FNAME,
+                              PC_LABLE_FNAME,
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          Expanded(
+                            child: _widget.textField(
+                              _lnameController,
+                              PC_ENTER_LNAME,
+                              PC_LABLE_LNAME,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _emailController,
+                        PC_ENTER_EMAIL,
+                        PC_ENTER_EMAIL,
+                      ),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _mobileController,
+                        PC_ENTERMO_NO,
+                        PC_LABEL_MO_NO,
+                      ),
+                      SizedBox(height: 10),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      _widget.titleText(PROFESSIONAL_INFORMATION),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _rollController,
+                        PC_ENTER_ROLL,
+                        PC_LABEL_ROLL,
+                      ),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _experianceController,
+                        PC_ENTER_EXPERIENCE,
+                        PC_LABEL_EXPERIENCE,
+                      ),
+                      SizedBox(height: 10),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      _widget.titleText(SOCIAL_MEDIA),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _instaURLController,
+                        PC_ENTER_INSTA_URL,
+                        PC_LABEL_INSTA_URL,
+                      ),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _linkedinURLController,
+                        PC_ENTER_LINKEDIN_URL,
+                        PC_LABEL_LINKEDIN_URL,
+                      ),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _gitURLController,
+                        PC_ENTER_GIT_URL,
+                        PC_LABEL_GIT_URL,
+                      ),
+                      SizedBox(height: 10),
+                    ],
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 15),
+              OutlinedButton(onPressed: () {}, child: Text(BTN_SUBMIT)),
+            ],
+          ),
         ),
       ),
     );

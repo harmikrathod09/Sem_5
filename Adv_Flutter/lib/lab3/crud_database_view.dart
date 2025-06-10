@@ -43,7 +43,7 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(CRUDDATABASEAPPBAR, style: TextStyle(color: Colors.white)),
+        title: Text(CRUD_DATABASE_APPBAR, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
       body: Padding(
@@ -52,7 +52,7 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
           children: [
             TextFormField(
               controller: _nameController,
-              decoration: InputDecoration(hintText: ENTERNAMEFIELDTEXT),
+              decoration: InputDecoration(hintText: ENTER_NAME_FIELDTEXT),
             ),
             SizedBox(height: 10),
             DropdownButton(
@@ -71,8 +71,8 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
               children: [
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text(GENEDERMALE),
-                    value: GENEDERMALE,
+                    title: const Text(GENEDER_MALE),
+                    value: GENEDER_MALE,
                     groupValue: _selectedGender,
                     onChanged: (String? value) {
                       setState(() {
@@ -83,8 +83,8 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                 ),
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text(GENEDERFEMALE),
-                    value: GENEDERFEMALE,
+                    title: const Text(GENEDER_FEMALE),
+                    value: GENEDER_FEMALE,
                     groupValue: _selectedGender,
                     onChanged: (String? value) {
                       setState(() {
@@ -99,9 +99,9 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
             ElevatedButton(
               onPressed: () async {
                 Map<String, dynamic> user = {
-                  DBUSERNAME: _nameController.text,  // fixed key
-                  DBCITY: _selectedCity,
-                  DBGENDER: _selectedGender,
+                  DB_USER_NAME: _nameController.text,  // fixed key
+                  DB_CITY: _selectedCity,
+                  DB_GENDER: _selectedGender,
                 };
 
                 if (_selectedID != -1) {
@@ -112,13 +112,13 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
 
                 _nameController.clear();
                 _selectedCity = city[0]; // default city
-                _selectedGender = GENEDERMALE; // default gender
+                _selectedGender = GENEDER_MALE; // default gender
                 _selectedID = -1;
 
                 _userList = await _controller.readUserDatabase();
                 setState(() {});
               },
-              child: Text(BTNSUBMIT),
+              child: Text(BTN_SUBMIT),
             ),
 
             SizedBox(height: 15),
@@ -129,9 +129,9 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text("$DBUSERNAME : ${_userList[index][DBUSERNAME]}"),  // fixed key
+                      title: Text("$DB_USER_NAME : ${_userList[index][DB_USER_NAME]}"),  // fixed key
                       subtitle: Text(
-                        "$DBCITY: ${_userList[index][DBCITY]} \n$DBGENDER : ${_userList[index][DBGENDER]}",
+                        "$DB_CITY: ${_userList[index][DB_CITY]} \n$DB_GENDER : ${_userList[index][DB_GENDER]}",
                       ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -140,10 +140,10 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                             onPressed: () {
                               setState(() {
                                 _nameController.text =
-                                _userList[index][DBUSERNAME];  // fixed key
-                                _selectedCity = _userList[index][DBCITY];
-                                _selectedGender = _userList[index][DBGENDER];
-                                _selectedID = _userList[index][DBID];
+                                _userList[index][DB_USER_NAME];  // fixed key
+                                _selectedCity = _userList[index][DB_CITY];
+                                _selectedGender = _userList[index][DB_GENDER];
+                                _selectedID = _userList[index][DB_ID];
                               });
                             },
                             icon: Icon(Icons.edit),
@@ -151,7 +151,7 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                           IconButton(
                             onPressed: () async {
                               await _controller.removeUserDatabase(
-                                _userList[index][DBID],
+                                _userList[index][DB_ID],
                               );
                               _userList = await _controller.readUserDatabase();  // refresh after delete
                               setState(() {});

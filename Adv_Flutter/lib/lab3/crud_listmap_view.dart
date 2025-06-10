@@ -10,7 +10,7 @@ class CrudListMapView extends StatefulWidget {
 class _CrudListMapViewState extends State<CrudListMapView> {
   TextEditingController _nameController = TextEditingController();
   String _selectedCity = "Ahmedabad";
-  String _selectedGender = GENEDERMALE;
+  String _selectedGender = GENEDER_MALE;
 
   int? _editingIndex = -1;
 
@@ -38,7 +38,7 @@ class _CrudListMapViewState extends State<CrudListMapView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(CRUDLISTMAPAPPBAR, style: TextStyle(color: Colors.white)),
+        title: Text(CRUD_DATABASE_APPBAR, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
       body: Padding(
@@ -47,15 +47,15 @@ class _CrudListMapViewState extends State<CrudListMapView> {
           children: [
             TextFormField(
               controller: _nameController,
-              decoration: InputDecoration(hintText: ENTERNAMEFIELDTEXT),
+              decoration: InputDecoration(hintText: ENTER_NAME_FIELDTEXT),
             ),
             SizedBox(height: 10),
             DropdownButton(
               value: _selectedCity,
               items:
-                  city.map((String items) {
-                    return DropdownMenuItem(value: items, child: Text(items));
-                  }).toList(),
+              city.map((String items) {
+                return DropdownMenuItem(value: items, child: Text(items));
+              }).toList(),
               onChanged: (String? newValue) {
                 setState(() {
                   _selectedCity = newValue!;
@@ -67,8 +67,8 @@ class _CrudListMapViewState extends State<CrudListMapView> {
               children: [
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text(GENEDERMALE),
-                    value: GENEDERMALE,
+                    title: const Text(GENEDER_MALE),
+                    value: GENEDER_MALE,
                     groupValue: _selectedGender,
                     onChanged: (String? value) {
                       setState(() {
@@ -79,8 +79,8 @@ class _CrudListMapViewState extends State<CrudListMapView> {
                 ),
                 Expanded(
                   child: RadioListTile<String>(
-                    title: const Text(GENEDERFEMALE),
-                    value: GENEDERFEMALE,
+                    title: const Text(GENEDER_FEMALE),
+                    value: GENEDER_FEMALE,
                     groupValue: _selectedGender,
                     onChanged: (String? value) {
                       setState(() {
@@ -95,9 +95,9 @@ class _CrudListMapViewState extends State<CrudListMapView> {
             ElevatedButton(
               onPressed: () {
                 Map<String, dynamic> user = {
-                  USERNAME: _nameController.text,
-                  USERCITY: _selectedCity,
-                  USERGENDER: _selectedGender,
+                  USER_NAME: _nameController.text,
+                  USER_CITY: _selectedCity,
+                  USER_GENDER: _selectedGender,
                 };
 
                 if (_editingIndex == -1) {
@@ -110,17 +110,17 @@ class _CrudListMapViewState extends State<CrudListMapView> {
                 setState(() {
                   _nameController.clear();
                   _selectedCity = city[0]; // default city
-                  _selectedGender = GENEDERMALE; // default gender
+                  _selectedGender = GENEDER_MALE; // default gender
                   _editingIndex = -1;
                   _userList = _userCRUD.readUser();
                 });
               },
-              child: Text(BTNSUBMIT),
+              child: Text(BTN_SUBMIT),
             ),
 
             SizedBox(height: 20),
 
-            Text(DISPLAYUSER, style: TextStyle(height: 5)),
+            Text(DISPLAY_USER, style: TextStyle(height: 5)),
 
             Expanded(
               child: ListView.builder(
@@ -128,9 +128,9 @@ class _CrudListMapViewState extends State<CrudListMapView> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text("$USERNAME : ${_userList[index][USERNAME]}"),
+                      title: Text("$USER_NAME : ${_userList[index][USER_NAME]}"),
                       subtitle: Text(
-                        "$USERCITY : ${_userList[index][USERCITY]} \n$USERGENDER : ${_userList[index][USERGENDER]}",
+                        "$USER_CITY : ${_userList[index][USER_CITY]} \n$USER_GENDER : ${_userList[index][USER_GENDER]}",
                       ),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -139,9 +139,9 @@ class _CrudListMapViewState extends State<CrudListMapView> {
                             onPressed: () {
                               setState(() {
                                 _nameController.text =
-                                    _userList[index][USERNAME];
-                                _selectedCity = _userList[index][USERCITY];
-                                _selectedGender = _userList[index][USERGENDER];
+                                _userList[index][USER_NAME];
+                                _selectedCity = _userList[index][USER_CITY];
+                                _selectedGender = _userList[index][USER_GENDER];
                                 _editingIndex = index;
                               });
                             },

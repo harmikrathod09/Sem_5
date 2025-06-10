@@ -2,17 +2,17 @@ import 'package:madf/utils/import_export.dart';
 
 class DatabaseCreation{
   Future<Database> initDatabase() async {
-    String path = join(await getDatabasesPath(), DBNAME);
+    String path = join(await getDatabasesPath(), DB_NAME);
     return openDatabase(
       path,
-      version: DBVERSION,
+      version: DB_VERSION,
       onCreate: (db, version) {
         db.execute(
-          "CREATE TABLE $DBTABLENAME("
-              "$DBID INTEGER PRIMARY KEY AUTOINCREMENT,"
-              "$DBUSERNAME TEXT,"
-              "$DBCITY TEXT,"
-              "$DBGENDER TEXT"
+          "CREATE TABLE $DB_TABLE_NAME("
+              "$DB_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+              "$DB_USER_NAME TEXT,"
+              "$DB_CITY TEXT,"
+              "$DB_GENDER TEXT"
               ")",
         );
       },
