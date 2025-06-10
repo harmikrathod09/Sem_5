@@ -1,3 +1,5 @@
+import 'package:madf/Lab2/profilecard.dart';
+import 'package:madf/lab2/profilecard_form_view.dart';
 import 'package:madf/utils/import_export.dart';
 
 void main() {
@@ -11,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:  CrudDatabaseView(),
+      home:  ProfilecardFormView(),
     );
   }
 }
