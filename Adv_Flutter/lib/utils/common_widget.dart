@@ -22,4 +22,20 @@ class CommonWidget {
       ),
     );
   }
+
+  Widget titleRowText(label, value) {
+    return Row(
+      children: [
+        Text(
+          "$label : ",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
+          ),
+        ),
+        Text(value, style: TextStyle(fontSize: 18, color: Colors.black)),
+      ],
+    );
+  }
 }

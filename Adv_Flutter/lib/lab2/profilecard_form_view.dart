@@ -1,3 +1,4 @@
+
 import 'package:adv_flutter/utils/import_export.dart';
 
 
@@ -29,7 +30,7 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(PROFILE_CARD_APPBAR, style: TextStyle(color: Colors.white)),
+        title: Text(PROFILE_CARD_FORM_APPBAR, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
       body: SingleChildScrollView(
@@ -159,6 +160,7 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
                     linkedin: _linkedinIdController.text,
                     git: _gitidController.text,
                   );
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ProfiecardView()));
                 },
                 child: Text(BTN_SUBMIT),
               ),

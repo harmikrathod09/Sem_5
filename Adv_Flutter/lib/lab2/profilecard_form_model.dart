@@ -1,7 +1,7 @@
 import 'package:adv_flutter/utils/import_export.dart';
 
 class ProfileCardFormModel {
-  Map<String, dynamic> user={};
+  static Map<String, dynamic> user={};
   void mapCreate({
     fname,
     lname,

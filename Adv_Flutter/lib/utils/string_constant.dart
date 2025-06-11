@@ -1,10 +1,12 @@
 //region appbar string const
-const String PROFILE_CARD_APPBAR="Profile Card Form";
+const String PROFILE_CARD_FORM_APPBAR="Profile Card Form";
+const String PROFILE_CARD_APPBAR="Profile Card";
 const String CRUD_LIST_MAP_APPBAR="Crud List of Map";
 const String CRUD_DATABASE_APPBAR="Crud Database";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
+
 const String PC_ENTER_FNAME = "Enter a First Name";
 const String PC_ENTER_LNAME = "Enter a Last Name";
 const String PC_ENTER_EMAIL = "Enter a Email";
@@ -24,6 +26,7 @@ const String SOCIAL_MEDIA="Social Media";
 //endregion
 
 //region PROFILECARD LABLE TEXT FORM CONSTANT
+const String PC_LABLE_NAME = "Name";
 const String PC_LABLE_FNAME = "First Name";
 const String PC_LABLE_LNAME = "Last Name";
 const String PC_LABEL_EMAIL = "Email";
