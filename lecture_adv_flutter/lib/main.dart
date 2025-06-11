@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Lecture',
 
-      home: GetxDemoView(),
+      home: Counterview(),
 
     );
   }

@@ -1,5 +1,5 @@
-import 'package:madf/lab3/databse.dart';
-import 'package:madf/utils/import_export.dart';
+import 'package:adv_flutter/lab3/databse.dart';
+import 'package:adv_flutter/utils/import_export.dart';
 
 class ModelClassDatabaseCRUD {
   DatabaseCreation _databaseCreation=DatabaseCreation();

@@ -1,5 +1,4 @@
-import 'package:madf/Lab3/crud_database_controller.dart';
-import 'package:madf/utils/import_export.dart';
+import 'package:adv_flutter/utils/import_export.dart';
 
 class CrudDatabaseView extends StatefulWidget {
   const CrudDatabaseView({super.key});

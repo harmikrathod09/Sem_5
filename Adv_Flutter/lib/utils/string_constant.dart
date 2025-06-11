@@ -11,9 +11,10 @@ const String PC_ENTER_EMAIL = "Enter a Email";
 const String PC_ENTERMO_NO = "Enter a Mobile No.";
 const String PC_ENTER_ROLL = "Enter a Roll";
 const String PC_ENTER_EXPERIENCE = "Enter a Experiance";
-const String PC_ENTER_INSTA_URL = "Enter a Instagram URL";
-const String PC_ENTER_LINKEDIN_URL = "Enter a LinkedIn URL";
-const String PC_ENTER_GIT_URL = "Enter a Git URL";
+const String PC_ENTER_WHATSAPP_NO = "Enter WhatsApp No.";
+const String PC_ENTER_INSTA_ID = "Enter a Instagram ID";
+const String PC_ENTER_LINKEDIN_ID = "Enter a LinkedIn ID";
+const String PC_ENTER_GIT_ID = "Enter a Git ID";
 //endregion
 
 //region PROFILECARD TITLE
@@ -29,9 +30,10 @@ const String PC_LABEL_EMAIL = "Email";
 const String PC_LABEL_MO_NO = "Mobile No.";
 const String PC_LABEL_ROLL = "Roll";
 const String PC_LABEL_EXPERIENCE = "Experiance";
-const String PC_LABEL_INSTA_URL = "Instagram URL";
-const String PC_LABEL_LINKEDIN_URL = "LinkedIn URL";
-const String PC_LABEL_GIT_URL = "Git URL";
+const String PC_LABEL_WHATSAPP_NO = "WhatsApp No.";
+const String PC_LABEL_INSTA_ID = "Instagram ID";
+const String PC_LABEL_LINKEDIN_ID = "LinkedIn ID";
+const String PC_LABEL_GIT_ID = "Git ID";
 //endregion
 
 //region FORM STRING

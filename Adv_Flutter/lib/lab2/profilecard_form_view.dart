@@ -1,5 +1,6 @@
-import 'package:madf/utils/common_widget.dart';
-import 'package:madf/utils/import_export.dart';
+import 'package:adv_flutter/utils/import_export.dart';
+
+
 
 class ProfilecardFormView extends StatefulWidget {
   const ProfilecardFormView({super.key});
@@ -15,15 +16,15 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
   TextEditingController _mobileController = TextEditingController();
   TextEditingController _rollController = TextEditingController();
   TextEditingController _experianceController = TextEditingController();
-  TextEditingController _instaURLController = TextEditingController();
-  TextEditingController _linkedinURLController = TextEditingController();
-  TextEditingController _gitURLController = TextEditingController();
-
-  final ImagePicker _picker = ImagePicker();
-  File? _selectedImage;
-
+  TextEditingController _instaIdController = TextEditingController();
+  TextEditingController _linkedinIdController = TextEditingController();
+  TextEditingController _gitidController = TextEditingController();
+  TextEditingController _whatsappnoController = TextEditingController();
 
   CommonWidget _widget = CommonWidget();
+  ProfilecardFormController _profilecardFormController =
+      ProfilecardFormController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +37,7 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-
-
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
               Card(
                 elevation: 4,
                 child: Padding(
@@ -117,21 +116,27 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
                       _widget.titleText(SOCIAL_MEDIA),
                       SizedBox(height: 10),
                       _widget.textField(
-                        _instaURLController,
-                        PC_ENTER_INSTA_URL,
-                        PC_LABEL_INSTA_URL,
+                        _whatsappnoController,
+                        PC_ENTER_WHATSAPP_NO,
+                        PC_LABEL_WHATSAPP_NO,
                       ),
                       SizedBox(height: 10),
                       _widget.textField(
-                        _linkedinURLController,
-                        PC_ENTER_LINKEDIN_URL,
-                        PC_LABEL_LINKEDIN_URL,
+                        _instaIdController,
+                        PC_ENTER_INSTA_ID,
+                        PC_LABEL_INSTA_ID,
                       ),
                       SizedBox(height: 10),
                       _widget.textField(
-                        _gitURLController,
-                        PC_ENTER_GIT_URL,
-                        PC_LABEL_GIT_URL,
+                        _linkedinIdController,
+                        PC_ENTER_LINKEDIN_ID,
+                        PC_LABEL_LINKEDIN_ID,
+                      ),
+                      SizedBox(height: 10),
+                      _widget.textField(
+                        _gitidController,
+                        PC_ENTER_GIT_ID,
+                        PC_LABEL_GIT_ID,
                       ),
                       SizedBox(height: 10),
                     ],
@@ -140,7 +145,23 @@ class _ProfilecardFormViewState extends State<ProfilecardFormView> {
               ),
 
               SizedBox(height: 15),
-              OutlinedButton(onPressed: () {}, child: Text(BTN_SUBMIT)),
+              OutlinedButton(
+                onPressed: () {
+                  _profilecardFormController.mapCreate(
+                    fname: _fnameController.text,
+                    lname: _lnameController.text,
+                    email: _emailController.text,
+                    mo_no: _mobileController.text,
+                    roll: _rollController.text,
+                    experiance: _experianceController.text,
+                    whatsapp: _whatsappnoController.text,
+                    insta: _instaIdController.text,
+                    linkedin: _linkedinIdController.text,
+                    git: _gitidController.text,
+                  );
+                },
+                child: Text(BTN_SUBMIT),
+              ),
             ],
           ),
         ),
