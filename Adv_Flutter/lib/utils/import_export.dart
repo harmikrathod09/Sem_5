@@ -17,3 +17,6 @@ export 'package:adv_flutter/Lab2/profilecard.dart';
 export '../utils/common_widget.dart';
 export 'package:adv_flutter/lab2/profiecard_view.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
+export 'package:adv_flutter/lab2/ecommerce_Dashboard_view.dart';
+export 'package:adv_flutter/lab2/ecommerce_controller.dart';
+export 'package:adv_flutter/lab2/ecommerce_model.dart';

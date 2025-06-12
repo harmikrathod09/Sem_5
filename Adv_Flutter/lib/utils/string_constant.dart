@@ -3,6 +3,7 @@ const String PROFILE_CARD_FORM_APPBAR="Profile Card Form";
 const String PROFILE_CARD_APPBAR="Profile Card";
 const String CRUD_LIST_MAP_APPBAR="Crud List of Map";
 const String CRUD_DATABASE_APPBAR="Crud Database";
+const String ECOMMERCE_DASHBOARD_APPBAR="Ecommmerce Dashboard";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
