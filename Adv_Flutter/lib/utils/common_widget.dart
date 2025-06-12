@@ -38,4 +38,15 @@ class CommonWidget {
       ],
     );
   }
+
+  Widget iconButtonSocialMedia(url,icon) {
+    return IconButton(
+      onPressed: () async {
+        await launch(
+         url,
+        );
+      },
+      icon: Icon(icon),
+    );
+  }
 }

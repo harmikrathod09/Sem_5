@@ -49,17 +49,28 @@ class ProfiecardView extends StatelessWidget {
                       PC_LABEL_EXPERIENCE,
                       ProfileCardFormModel.user[PC_LABEL_EXPERIENCE],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.whatsapp)),
-                        IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.instagram)),
-                        IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.linkedin)),
-                        IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.github)),
+                        _widget.iconButtonSocialMedia(
+                          "https://wa.me/${ProfileCardFormModel.user[PC_LABEL_WHATSAPP_NO]}",
+                          FontAwesomeIcons.whatsapp,
+                        ),
+                        _widget.iconButtonSocialMedia(
+                          "https://www.instagram.com/${ProfileCardFormModel.user[PC_LABEL_INSTA_ID]}",
+                          FontAwesomeIcons.instagram,
+                        ),
+                        _widget.iconButtonSocialMedia(
+                          "https://www.linkedin.com/in/${ProfileCardFormModel.user[PC_LABEL_LINKEDIN_ID]}",
+                          FontAwesomeIcons.linkedin,
+                        ),
+                        _widget.iconButtonSocialMedia(
+                          "https://github.com/${ProfileCardFormModel.user[PC_LABEL_GIT_ID]}",
+                          FontAwesomeIcons.github,
+                        ),
                       ],
-                    )
-
+                    ),
                   ],
                 ),
               ),
