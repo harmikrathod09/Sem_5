@@ -51,6 +51,8 @@ const String GENEDER_FEMALE = "Female";
 
 //region BUTTON
 const String BTN_SUBMIT = "Submit";
+const String BTN_VIEW_ALL = "View All";
+const String BTN_SEE_ALL = "See All";
 //endregion
 
 //region USER MAP
@@ -101,9 +103,18 @@ const String CART_ITEMS = "Cart Items";
 //region ECOMMERCE TITLE
 const String QUICK_ACTIONS = "Quick Actions";
 const String CATEGORIES = "Categories";
+const String FEATURED_PRODUCTS = "Featured Product";
+const String RECENT_ORDERS = "Recent Orders";
 //endregion
 
 //region ECOMMERCE QUICK ACCESS
 const String BROWSE_PRODUCT = "Browse Products";
 const String TRACK_ORDERS = "Track Orders";
+//endregion
+
+//region ECOMMERCE CATEGORIES
+const String ELECTRONIC = "Electronics";
+const String FASHION = "Fashion";
+const String HOME = "Home";
+const String SPORTS = "Sports";
 //endregion

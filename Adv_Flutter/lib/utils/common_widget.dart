@@ -173,4 +173,115 @@ class CommonWidget {
       ),
     );
   }
+
+  Widget categorySectionItems({color, icon, title}) {
+    return Column(
+      children: [
+        Container(
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            shape: BoxShape.circle,
+            border: Border.all(color: color.withOpacity(0.1)),
+          ),
+          child: Icon(icon, color: color, size: 28),
+        ),
+        SizedBox(height: 8),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            color: Colors.black87,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget titleRowTextWithBtn(title, btnTxt) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        titleText(title),
+        TextButton(onPressed: () {}, child: Text(btnTxt)),
+      ],
+    );
+  }
+
+  // Widget fetaureCard(count){
+  //   return Container(
+  //     height: 200,
+  //     child: ListView.builder(
+  //       scrollDirection: Axis.horizontal,
+  //       itemCount: count,
+  //       itemBuilder: (context, index) {
+  //         return Container(
+  //           width: 160,
+  //           margin: EdgeInsets.only(right: 12),
+  //           decoration: BoxDecoration(
+  //             color: Colors.white,
+  //             borderRadius: BorderRadius.circular(12),
+  //             boxShadow: [
+  //               BoxShadow(
+  //                 color: Colors.grey.withOpacity(0.1),
+  //                 spreadRadius: 1,
+  //                 blurRadius: 5,
+  //                 offset: Offset(0, 2),
+  //               ),
+  //             ],
+  //           ),
+  //           child: Column(
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: [
+  //               Container(
+  //                 height: 120,
+  //                 decoration: BoxDecoration(
+  //                   color: Colors.grey.shade200,
+  //                   borderRadius: BorderRadius.vertical(
+  //                     top: Radius.circular(12),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Icon(
+  //                     Icons.image,
+  //                     size: 40,
+  //                     color: Colors.grey.shade400,
+  //                   ),
+  //                 ),
+  //               ),
+  //               Padding(
+  //                 padding: EdgeInsets.all(12),
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: [
+  //                     Text(
+  //                       'Product ${index + 1}',
+  //                       style: TextStyle(
+  //                         fontSize: 14,
+  //                         fontWeight: FontWeight.w600,
+  //                       ),
+  //                       maxLines: 1,
+  //                       overflow: TextOverflow.ellipsis,
+  //                     ),
+  //                     SizedBox(height: 4),
+  //                     Text(
+  //                       '\$${(index + 1) * 25}.99',
+  //                       style: TextStyle(
+  //                         fontSize: 14,
+  //                         fontWeight: FontWeight.bold,
+  //                         color: Colors.green,
+  //                       ),
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         );
+  //       },
+  //     ),
+  //   ),
+  // }
 }

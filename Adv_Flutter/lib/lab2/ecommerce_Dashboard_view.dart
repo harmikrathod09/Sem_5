@@ -93,66 +93,102 @@ class _EcommerceDashboardViewState extends State<EcommerceDashboardView> {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _commonWidget.welcomeSectionEcommerce(
-              Colors.orange,
-              WELCOME_BACK_USER,
-              Colors.white,
-              24,
-              WELCOME_SUBTITLE,
-              Colors.white70,
-              15,
-            ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                _commonWidget.buildStatusCard(
-                  icon: Icons.shopping_bag,
-                  title: TOTAL_ORDERS,
-                  value: "20",
-                  color: Colors.green,
-                ),
-                SizedBox(width: 10),
-                _commonWidget.buildStatusCard(
-                  icon: Icons.favorite,
-                  title: WISHLIST,
-                  value: "10",
-                  color: Colors.red,
-                ),
-                SizedBox(width: 10),
-                _commonWidget.buildStatusCard(
-                  icon: Icons.shopping_cart,
-                  title: CART_ITEMS,
-                  value: "13",
-                  color: Colors.orange,
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            _commonWidget.titleText(QUICK_ACTIONS),
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                _commonWidget.quickAccess(
-                  color: Colors.blue,
-                  icon: Icons.storefront,
-                  title: BROWSE_PRODUCT,
-                ),
-                SizedBox(width: 10,),
-                _commonWidget.quickAccess(
-                  color: Colors.green,
-                  icon: Icons.local_shipping,
-                  title: TRACK_ORDERS,
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            _commonWidget.titleText(CATEGORIES),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _commonWidget.welcomeSectionEcommerce(
+                Colors.orange,
+                WELCOME_BACK_USER,
+                Colors.white,
+                24,
+                WELCOME_SUBTITLE,
+                Colors.white70,
+                15,
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  _commonWidget.buildStatusCard(
+                    icon: Icons.shopping_bag,
+                    title: TOTAL_ORDERS,
+                    value: "20",
+                    color: Colors.green,
+                  ),
+                  SizedBox(width: 10),
+                  _commonWidget.buildStatusCard(
+                    icon: Icons.favorite,
+                    title: WISHLIST,
+                    value: "10",
+                    color: Colors.red,
+                  ),
+                  SizedBox(width: 10),
+                  _commonWidget.buildStatusCard(
+                    icon: Icons.shopping_cart,
+                    title: CART_ITEMS,
+                    value: "13",
+                    color: Colors.orange,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              _commonWidget.titleText(QUICK_ACTIONS),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  _commonWidget.quickAccess(
+                    color: Colors.blue,
+                    icon: Icons.storefront,
+                    title: BROWSE_PRODUCT,
+                  ),
+                  SizedBox(width: 10),
+                  _commonWidget.quickAccess(
+                    color: Colors.green,
+                    icon: Icons.local_shipping,
+                    title: TRACK_ORDERS,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              _commonWidget.titleText(CATEGORIES),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _commonWidget.categorySectionItems(
+                    title: ELECTRONIC,
+                    icon: Icons.devices,
+                    color: Colors.blue,
+                  ),
+                  _commonWidget.categorySectionItems(
+                    title: FASHION,
+                    icon: Icons.checkroom,
+                    color: Colors.pink,
+                  ),
+                  _commonWidget.categorySectionItems(
+                    title: HOME,
+                    icon: Icons.home,
+                    color: Colors.green,
+                  ),
+                  _commonWidget.categorySectionItems(
+                    title: SPORTS,
+                    icon: Icons.sports_soccer,
+                    color: Colors.orange,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              _commonWidget.titleRowTextWithBtn(FEATURED_PRODUCTS, BTN_SEE_ALL),
+              SizedBox(height: 10),
+
+              SizedBox(height: 20),
+              _commonWidget.titleRowTextWithBtn(RECENT_ORDERS, BTN_VIEW_ALL),
+              SizedBox(height: 10,),
+        
+            ],
+          ),
         ),
       ),
     );
