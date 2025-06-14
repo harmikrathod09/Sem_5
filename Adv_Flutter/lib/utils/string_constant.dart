@@ -1,9 +1,9 @@
 //region appbar string const
-const String PROFILE_CARD_FORM_APPBAR="Profile Card Form";
-const String PROFILE_CARD_APPBAR="Profile Card";
-const String CRUD_LIST_MAP_APPBAR="Crud List of Map";
-const String CRUD_DATABASE_APPBAR="Crud Database";
-const String ECOMMERCE_DASHBOARD_APPBAR="Ecommmerce Dashboard";
+const String PROFILE_CARD_FORM_APPBAR = "Profile Card Form";
+const String PROFILE_CARD_APPBAR = "Profile Card";
+const String CRUD_LIST_MAP_APPBAR = "Crud List of Map";
+const String CRUD_DATABASE_APPBAR = "Crud Database";
+const String ECOMMERCE_DASHBOARD_APPBAR = "Ecommmerce Dashboard";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -21,9 +21,9 @@ const String PC_ENTER_GIT_ID = "Enter a Git ID";
 //endregion
 
 //region PROFILECARD TITLE
-const String PERSONAL_INFORMATION="Personal Information";
-const String PROFESSIONAL_INFORMATION="Professional Information";
-const String SOCIAL_MEDIA="Social Media";
+const String PERSONAL_INFORMATION = "Personal Information";
+const String PROFESSIONAL_INFORMATION = "Professional Information";
+const String SOCIAL_MEDIA = "Social Media";
 //endregion
 
 //region PROFILECARD LABLE TEXT FORM CONSTANT
@@ -41,34 +41,69 @@ const String PC_LABEL_GIT_ID = "Git ID";
 //endregion
 
 //region FORM STRING
-const String ENTER_NAME_FIELDTEXT="Enter a Name";
+const String ENTER_NAME_FIELDTEXT = "Enter a Name";
 //endregion
 
 //region GENDER
-const String GENEDER_MALE="Male";
-const String GENEDER_FEMALE="Female";
+const String GENEDER_MALE = "Male";
+const String GENEDER_FEMALE = "Female";
 //endregion
 
 //region BUTTON
-const String BTN_SUBMIT="Submit";
+const String BTN_SUBMIT = "Submit";
 //endregion
 
 //region USER MAP
-const String USER_NAME="Name";
-const String USER_CITY="City";
-const String USER_GENDER="Gender";
+const String USER_NAME = "Name";
+const String USER_CITY = "City";
+const String USER_GENDER = "Gender";
 //endregion
 
 //region USER TITLE
-const String DISPLAY_USER="Display User";
+const String DISPLAY_USER = "Display User";
 //endregion
 
 //region DATABASE CONSTANT
-const String DB_NAME="User_DB.db";
-const String DB_TABLE_NAME="table_user";
-const String DB_ID="UID";
-const String DB_USER_NAME="Name";
-const String DB_GENDER="Gender";
-const String DB_CITY="City";
-const int DB_VERSION=1;
+const String DB_NAME = "User_DB.db";
+const String DB_TABLE_NAME = "table_user";
+const String DB_ID = "UID";
+const String DB_USER_NAME = "Name";
+const String DB_GENDER = "Gender";
+const String DB_CITY = "City";
+const int DB_VERSION = 1;
+//endregion
+
+//region DRAWER
+const String USER_NAME_DRAWER = "Harmik Rathod";
+const String USER_EMAIL_DRAWER = "harmikrathod56@gmail.com";
+const String HOME_DRAWER = "Home";
+const String CATEGORIES_DRAWER = "Categories";
+const String ORDER_DRAWER = "My Order";
+const String CART_DRAWER = "My Cart";
+const String WISHLIST_DRAWER = "Wish List";
+const String PROFILE_DRAWER = "Profile";
+const String SETTING_DRAWER = "Setting";
+const String HELP_DRAWER = "Help";
+const String LOGOUT_DRAWER = "Log Out";
+//endregion
+
+//region ECOMMERCE WELCOME SECTION DASHBOARD
+const String WELCOME_BACK_USER = "Welcome Back, Harmik!";
+const String WELCOME_SUBTITLE = "Discover amazing products and deals";
+//endregion
+
+//region ECOMMERCE STATUS CARD
+const String TOTAL_ORDERS = "Total Orders";
+const String WISHLIST = "Wishlist";
+const String CART_ITEMS = "Cart Items";
+//endregion
+
+//region ECOMMERCE TITLE
+const String QUICK_ACTIONS = "Quick Actions";
+const String CATEGORIES = "Categories";
+//endregion
+
+//region ECOMMERCE QUICK ACCESS
+const String BROWSE_PRODUCT = "Browse Products";
+const String TRACK_ORDERS = "Track Orders";
 //endregion
