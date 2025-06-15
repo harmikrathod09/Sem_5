@@ -9,6 +9,7 @@ class EcommerceDashboardView extends StatefulWidget {
 
 class _EcommerceDashboardViewState extends State<EcommerceDashboardView> {
   CommonWidget _commonWidget = CommonWidget();
+  EcommerceController _ecommerceController=EcommerceController();
 
   @override
   Widget build(BuildContext context) {
@@ -182,11 +183,11 @@ class _EcommerceDashboardViewState extends State<EcommerceDashboardView> {
               SizedBox(height: 20),
               _commonWidget.titleRowTextWithBtn(FEATURED_PRODUCTS, BTN_SEE_ALL),
               SizedBox(height: 10),
-
+              _commonWidget.fetaureCard(items: _ecommerceController.products),
               SizedBox(height: 20),
               _commonWidget.titleRowTextWithBtn(RECENT_ORDERS, BTN_VIEW_ALL),
               SizedBox(height: 10,),
-        
+              _commonWidget.recentOrder(items: _ecommerceController.recentOrders)
             ],
           ),
         ),

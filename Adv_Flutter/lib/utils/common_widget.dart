@@ -1,3 +1,5 @@
+import 'package:flutter/rendering.dart';
+
 import 'import_export.dart';
 
 class CommonWidget {
@@ -78,15 +80,13 @@ class CommonWidget {
     );
   }
 
-  Widget welcomeSectionEcommerce(
-    background,
-    title,
-    titleColor,
-    titleSize,
-    subtitle,
-    subtitleColor,
-    subtitleSize,
-  ) {
+  Widget welcomeSectionEcommerce(background,
+      title,
+      titleColor,
+      titleSize,
+      subtitle,
+      subtitleColor,
+      subtitleSize,) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(20),
@@ -210,78 +210,152 @@ class CommonWidget {
     );
   }
 
-  // Widget fetaureCard(count){
-  //   return Container(
-  //     height: 200,
-  //     child: ListView.builder(
-  //       scrollDirection: Axis.horizontal,
-  //       itemCount: count,
-  //       itemBuilder: (context, index) {
-  //         return Container(
-  //           width: 160,
-  //           margin: EdgeInsets.only(right: 12),
-  //           decoration: BoxDecoration(
-  //             color: Colors.white,
-  //             borderRadius: BorderRadius.circular(12),
-  //             boxShadow: [
-  //               BoxShadow(
-  //                 color: Colors.grey.withOpacity(0.1),
-  //                 spreadRadius: 1,
-  //                 blurRadius: 5,
-  //                 offset: Offset(0, 2),
-  //               ),
-  //             ],
-  //           ),
-  //           child: Column(
-  //             crossAxisAlignment: CrossAxisAlignment.start,
-  //             children: [
-  //               Container(
-  //                 height: 120,
-  //                 decoration: BoxDecoration(
-  //                   color: Colors.grey.shade200,
-  //                   borderRadius: BorderRadius.vertical(
-  //                     top: Radius.circular(12),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Icon(
-  //                     Icons.image,
-  //                     size: 40,
-  //                     color: Colors.grey.shade400,
-  //                   ),
-  //                 ),
-  //               ),
-  //               Padding(
-  //                 padding: EdgeInsets.all(12),
-  //                 child: Column(
-  //                   crossAxisAlignment: CrossAxisAlignment.start,
-  //                   children: [
-  //                     Text(
-  //                       'Product ${index + 1}',
-  //                       style: TextStyle(
-  //                         fontSize: 14,
-  //                         fontWeight: FontWeight.w600,
-  //                       ),
-  //                       maxLines: 1,
-  //                       overflow: TextOverflow.ellipsis,
-  //                     ),
-  //                     SizedBox(height: 4),
-  //                     Text(
-  //                       '\$${(index + 1) * 25}.99',
-  //                       style: TextStyle(
-  //                         fontSize: 14,
-  //                         fontWeight: FontWeight.bold,
-  //                         color: Colors.green,
-  //                       ),
-  //                     ),
-  //                   ],
-  //                 ),
-  //               ),
-  //             ],
-  //           ),
-  //         );
-  //       },
-  //     ),
-  //   ),
-  // }
+  Widget fetaureCard({items}) {
+    print(items);
+    return Container(
+      height: 200,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Container(
+            width: 160,
+            margin: EdgeInsets.only(right: 12),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.1))],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(12),
+                    ),
+                  ),
+                  child: Center(child: Image.network(items[index]['image'])),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        items[index]['name'],
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Rs. ${items[index]['price']}",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget recentOrder({items}) {
+    return Container(
+      height: 300,
+      child: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final order = items[index];
+          return Container(
+            margin: EdgeInsets.only(bottom: 12),
+            padding: EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.1),
+                  spreadRadius: 1,
+                  blurRadius: 5,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Icon(
+                    Icons.shopping_bag,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+                SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        order['orderId'],
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        '${order['itemsCount']} items • \$${order['totalPrice']}',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey.shade600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: order['status'] == 'Delivered'
+                        ? Colors.green.withOpacity(0.1)
+                        : Colors.orange.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(
+                    order['status'],
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: order['status'] == 'Delivered'
+                          ? Colors.green
+                          : Colors.orange,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
 }
