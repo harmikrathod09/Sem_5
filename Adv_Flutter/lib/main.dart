@@ -1,4 +1,5 @@
 
+import 'package:adv_flutter/lab4/custom_dialoge.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ButtomsheetDemo(),
+      home: NevigationFirstGetx(),
     );
   }
 }

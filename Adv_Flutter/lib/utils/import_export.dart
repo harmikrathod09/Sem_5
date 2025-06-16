@@ -23,3 +23,5 @@ export 'package:adv_flutter/lab2/ecommerce_model.dart';
 export 'package:adv_flutter/lab4/dialoge_box.dart';
 export 'package:adv_flutter/lab4/snackbar.dart';
 export 'package:adv_flutter/lab4/buttomsheet_demo.dart';
+export 'package:adv_flutter/lab5/nevigation_first_getx.dart';
+export 'package:adv_flutter/lab5/nevigation_second_getx.dart';

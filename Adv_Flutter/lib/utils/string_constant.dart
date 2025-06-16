@@ -7,6 +7,9 @@ const String ECOMMERCE_DASHBOARD_APPBAR = "Ecommmerce Dashboard";
 const String DEFALUT_DIALOGE_BOX_DEMO_APPBAR = "Defalut Dialoge Box Demo";
 const String GET_SNACKBAR_DEMO_APPBAR = "Get Snackbar Demo";
 const String GET_BHOTTOMSHEET_DEMO_APPBAR = "Get Bottom Sheet Demo";
+const String CUSTOM_ALERT_BOX_DEMO_APPBAR = "Custom Alert Box Demo";
+const String NEVIGATION_FIRST_GETX_APPBAR="Nevigation First Getx";
+const String NEVIGATION_SECOND_GETX_APPBAR="Nevigation Second Getx";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -56,6 +59,8 @@ const String GENEDER_FEMALE = "Female";
 const String BTN_SUBMIT = "Submit";
 const String BTN_VIEW_ALL = "View All";
 const String BTN_SEE_ALL = "See All";
+const String BTN_MOVE="MOVE";
+const String BTN_BACK="BACK";
 //endregion
 
 //region USER MAP
@@ -130,4 +135,12 @@ const String ALERT_NO = "No";
 const String OPEN_SNACKBAR_BUTTON = "Open Snackbar";
 const String SNACKBAR_TITLE="Snackbar Title";
 const String SNACKBAR_MSG="Snackbar Message";
+const String OPEN_CUSTOM_ALRET_BOX="Open Custom Alert Box";
+//endregion
+
+//region LAB5
+const String FIRST_PAGE_TITLE="First Page";
+const String SECOND_PAGE_TITLE="Second Page";
+const String FIRST_PAGE_SUBTITLE="Press MOVE button to move to second page";
+const String SECOND_PAGE_SUBTITLE="Press BACK button to move back to first page";
 //endregion

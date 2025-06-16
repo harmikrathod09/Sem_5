@@ -25,13 +25,18 @@ class ButtomsheetDemo extends StatelessWidget {
                     color: Colors.white,
                     height: 200,
                     width: double.infinity,
-
                     child: Column(
                       children: [
-                        Text("ABC"),
-                        Text("DEF"),
-                        Text("GHI"),
-                        Text("JKL"),
+                        Expanded(
+                          child: ListView.builder(
+                            itemCount: 10,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                title: Text("Index ${index + 1}"),
+                              );
+                            },
+                          ),
+                        ),
                       ],
                     ),
                   ),
