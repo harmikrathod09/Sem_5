@@ -80,13 +80,15 @@ class CommonWidget {
     );
   }
 
-  Widget welcomeSectionEcommerce(background,
-      title,
-      titleColor,
-      titleSize,
-      subtitle,
-      subtitleColor,
-      subtitleSize,) {
+  Widget welcomeSectionEcommerce(
+    background,
+    title,
+    titleColor,
+    titleSize,
+    subtitle,
+    subtitleColor,
+    subtitleSize,
+  ) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(20),
@@ -304,10 +306,7 @@ class CommonWidget {
                     color: Colors.grey.shade200,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(
-                    Icons.shopping_bag,
-                    color: Colors.grey.shade400,
-                  ),
+                  child: Icon(Icons.shopping_bag, color: Colors.grey.shade400),
                 ),
                 SizedBox(width: 12),
                 Expanded(
@@ -334,18 +333,20 @@ class CommonWidget {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: order['status'] == 'Delivered'
-                        ? Colors.green.withOpacity(0.1)
-                        : Colors.orange.withOpacity(0.1),
+                    color:
+                        order['status'] == 'Delivered'
+                            ? Colors.green.withOpacity(0.1)
+                            : Colors.orange.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
                     order['status'],
                     style: TextStyle(
                       fontSize: 12,
-                      color: order['status'] == 'Delivered'
-                          ? Colors.green
-                          : Colors.orange,
+                      color:
+                          order['status'] == 'Delivered'
+                              ? Colors.green
+                              : Colors.orange,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -357,5 +358,4 @@ class CommonWidget {
       ),
     );
   }
-
 }

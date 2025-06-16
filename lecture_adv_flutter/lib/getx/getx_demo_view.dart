@@ -3,7 +3,7 @@ import 'package:lecture_adv_flutter/utils/import_file.dart';
 class GetxDemoView extends StatelessWidget {
   GetxDemoView({super.key});
 
-  GetxDemoController _getxDemoController = Get.put(GetxDemoController());
+  final GetxDemoController _getxDemoController = Get.put(GetxDemoController());
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +21,24 @@ class GetxDemoView extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Get.defaultDialog(
+        onPressed: () async {
+          await Get.defaultDialog(
             title: DIALOGE_TITLE_TXT,
             textConfirm: DIALOGE_YES_BTN,
             textCancel: DIALOGE_NO_BTN,
 
             onConfirm: () {
               _getxDemoController.incrementCounter();
-              Get.to(GetxDemoView());
+              // Get.to(GetxDemoView());
+              print(':::BACK NOT DONE:::');
+              Get.back(closeOverlays: true);
               Get.snackbar(
                 SNAKEBAR_TITLE,
                 SNAKEBAR_SUBTITLE,
                 backgroundColor: Colors.white,
                 colorText: Colors.black,
               );
-    
+
               // Close the dialog after a short delay
             },
 

@@ -1,6 +1,6 @@
-import 'package:adv_flutter/lab2/ecommerce_Dashboard_view.dart';
-import 'package:adv_flutter/lab2/profilecard_form_view.dart';
-import 'package:flutter/material.dart';
+
+import 'package:adv_flutter/utils/import_export.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: EcommerceDashboardView(),
+      home: ButtomsheetDemo(),
     );
   }
 }

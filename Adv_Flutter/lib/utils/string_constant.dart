@@ -4,6 +4,9 @@ const String PROFILE_CARD_APPBAR = "Profile Card";
 const String CRUD_LIST_MAP_APPBAR = "Crud List of Map";
 const String CRUD_DATABASE_APPBAR = "Crud Database";
 const String ECOMMERCE_DASHBOARD_APPBAR = "Ecommmerce Dashboard";
+const String DEFALUT_DIALOGE_BOX_DEMO_APPBAR = "Defalut Dialoge Box Demo";
+const String GET_SNACKBAR_DEMO_APPBAR = "Get Snackbar Demo";
+const String GET_BHOTTOMSHEET_DEMO_APPBAR = "Get Bottom Sheet Demo";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -117,4 +120,14 @@ const String ELECTRONIC = "Electronics";
 const String FASHION = "Fashion";
 const String HOME = "Home";
 const String SPORTS = "Sports";
+//endregion
+
+//region GETX DEMO
+const String ALERT_TITLE = "Alret Box";
+const String ALERT_MIDDLE_TEXT = "Alret Box's Middle Text";
+const String ALERT_YES = "Yes";
+const String ALERT_NO = "No";
+const String OPEN_SNACKBAR_BUTTON = "Open Snackbar";
+const String SNACKBAR_TITLE="Snackbar Title";
+const String SNACKBAR_MSG="Snackbar Message";
 //endregion

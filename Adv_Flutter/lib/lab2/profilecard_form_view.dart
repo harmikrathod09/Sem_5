@@ -1,8 +1,6 @@
 
 import 'package:adv_flutter/utils/import_export.dart';
 
-
-
 class ProfilecardFormView extends StatefulWidget {
   const ProfilecardFormView({super.key});
 
