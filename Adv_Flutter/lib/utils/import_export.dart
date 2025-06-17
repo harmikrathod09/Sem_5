@@ -25,3 +25,7 @@ export 'package:adv_flutter/lab4/snackbar.dart';
 export 'package:adv_flutter/lab4/buttomsheet_demo.dart';
 export 'package:adv_flutter/lab5/nevigation_first_getx.dart';
 export 'package:adv_flutter/lab5/nevigation_second_getx.dart';
+export 'package:adv_flutter/lab5/nevigation_data_tranfer_first_page.dart';
+export 'package:adv_flutter/lab5/nevigation_data_tranfer_second_page.dart';
+export 'package:adv_flutter/lab5/neviagation_data_transfer_controller.dart';
+export 'package:adv_flutter/lab5/neviigation_data_transfer_model.dart';

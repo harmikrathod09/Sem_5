@@ -10,6 +10,8 @@ const String GET_BHOTTOMSHEET_DEMO_APPBAR = "Get Bottom Sheet Demo";
 const String CUSTOM_ALERT_BOX_DEMO_APPBAR = "Custom Alert Box Demo";
 const String NEVIGATION_FIRST_GETX_APPBAR="Nevigation First Getx";
 const String NEVIGATION_SECOND_GETX_APPBAR="Nevigation Second Getx";
+const String NEVIGATION_DATA_TRANSFER_FIRST_GETX_APPBAR="Nevigation Data Transfer First Getx";
+const String NEVIGATION_DATA_TRANSFER_SECOND_GETX_APPBAR="Nevigation Data Transfer Second Getx";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -143,4 +145,6 @@ const String FIRST_PAGE_TITLE="First Page";
 const String SECOND_PAGE_TITLE="Second Page";
 const String FIRST_PAGE_SUBTITLE="Press MOVE button to move to second page";
 const String SECOND_PAGE_SUBTITLE="Press BACK button to move back to first page";
+const String ENTER_NAME="Enter a Name ";
+const String ENTER_EMAIL="Enter a Email ";
 //endregion
