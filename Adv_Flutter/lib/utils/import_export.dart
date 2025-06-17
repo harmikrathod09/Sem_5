@@ -29,3 +29,4 @@ export 'package:adv_flutter/lab5/nevigation_data_tranfer_first_page.dart';
 export 'package:adv_flutter/lab5/nevigation_data_tranfer_second_page.dart';
 export 'package:adv_flutter/lab5/neviagation_data_transfer_controller.dart';
 export 'package:adv_flutter/lab5/neviigation_data_transfer_model.dart';
+export 'package:adv_flutter/lab5/first_page_named_route.dart';

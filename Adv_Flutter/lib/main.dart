@@ -1,11 +1,12 @@
-
 import 'package:adv_flutter/lab4/custom_dialoge.dart';
+import 'package:adv_flutter/lab5/second_page_named_route.dart';
+
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
 void main() {
   Get.put(NevigationDataTransferController());
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +20,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: NevigationDataTranferFirstPage(),
+      // home: NevigationDataTranferFirstPage(),
+      initialRoute: NAV_FIRST_PAGE,
+      getPages: [
+        GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
+        GetPage(name: NAV_SECOND_PAGE, page: () => SecondPageNamedRoute()),
+      ],
     );
   }
 }
