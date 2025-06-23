@@ -14,6 +14,9 @@ const String NEVIGATION_DATA_TRANSFER_FIRST_GETX_APPBAR="Nevigation Data Transfe
 const String NEVIGATION_DATA_TRANSFER_SECOND_GETX_APPBAR="Nevigation Data Transfer Second Getx";
 const String NAMED_ROUTE_FIRST_PAGE_APPBAR="Named Route First Page";
 const String NAMED_ROUTE_SECOND_PAGE_APPBAR="Named Route Second Page";
+const String NON_REACTIVE_VAR_DEMO_APPBAR="Non Reactive Varible Demo";
+const String RX_VAR_DEMO_APPBAR="Rx Varible Demo";
+const String RX_STRING_APPBAR="TextField RxString Realtime Change";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -151,4 +154,10 @@ const String ENTER_NAME="Enter a Name ";
 const String ENTER_EMAIL="Enter a Email ";
 const String NAV_FIRST_PAGE="/FirstPageNamedRoute";
 const String NAV_SECOND_PAGE="/SecondPageNamedRoute";
+//endregion
+
+//region LAB6
+const String PRESS_FLOATING_BTN_TO_INCRESE_BY_ONE="Press Floating Button To Increse By One";
+const String TYPE_HERE='Type Here';
+const String YOU_TYPED='You Typed: ';
 //endregion

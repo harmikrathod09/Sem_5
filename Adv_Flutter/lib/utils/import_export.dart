@@ -30,3 +30,8 @@ export 'package:adv_flutter/lab5/nevigation_data_tranfer_second_page.dart';
 export 'package:adv_flutter/lab5/neviagation_data_transfer_controller.dart';
 export 'package:adv_flutter/lab5/neviigation_data_transfer_model.dart';
 export 'package:adv_flutter/lab5/first_page_named_route.dart';
+export 'package:adv_flutter/lab6/non_reactive_var_view.dart';
+export 'package:adv_flutter/lab6/non_reactive_var_model.dart';
+export 'package:adv_flutter/lab6/non_reactive_var_controller.dart';
+export 'package:adv_flutter/lab6/rx_string_controller.dart';
+export 'package:adv_flutter/lab6/rx_string_view.dart';
