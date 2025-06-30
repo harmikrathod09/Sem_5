@@ -19,15 +19,16 @@ class FavoriteUsersView extends StatelessWidget {
           return Center(child: Text(NO_FAV_USER));
         }
 
-        return ListView.separated(
+        return ListView.builder(
           itemCount: favUsers.length,
-          separatorBuilder: (_, __) => Divider(),
           itemBuilder: (context, index) {
             final user = favUsers[index];
-            return ListTile(
-              title: Text(user.name),
-              subtitle: Text(user.email),
-              trailing: Icon(Icons.favorite, color: Colors.red),
+            return Card(
+              child: ListTile(
+                title: Text(user.name),
+                subtitle: Text(user.email),
+                trailing: Icon(Icons.favorite, color: Colors.red),
+              ),
             );
           },
         );

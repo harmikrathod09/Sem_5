@@ -30,32 +30,34 @@ class RxlistCrudView extends StatelessWidget {
           itemCount: _controller.users.length,
           itemBuilder: (context, index) {
             final user = _controller.users[index];
-            return ListTile(
-              title: Text(user.name),
-              subtitle: Text(user.email),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: Icon(
-                      user.isFavorite ? Icons.favorite : Icons.favorite_border,
-                      color: user.isFavorite ? Colors.red : Colors.grey,
+            return Card(
+              child: ListTile(
+                title: Text(user.name),
+                subtitle: Text(user.email),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        user.isFavorite ? Icons.favorite : Icons.favorite_border,
+                        color: user.isFavorite ? Colors.red : Colors.grey,
+                      ),
+                      onPressed: () => _controller.toggleFavorite(index),
                     ),
-                    onPressed: () => _controller.toggleFavorite(index),
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.edit, color: Colors.blue),
-                    onPressed: () {
-                      Get.toNamed(RXLIST_ADD_EDIT, arguments: index);
-                    },
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.delete, color: Colors.red),
-                    onPressed: () {
-                      _controller.removeUser(index);
-                    },
-                  ),
-                ],
+                    IconButton(
+                      icon: Icon(Icons.edit, color: Colors.blue),
+                      onPressed: () {
+                        Get.toNamed(RXLIST_ADD_EDIT, arguments: index);
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.delete, color: Colors.red),
+                      onPressed: () {
+                        _controller.removeUser(index);
+                      },
+                    ),
+                  ],
+                ),
               ),
             );
           },

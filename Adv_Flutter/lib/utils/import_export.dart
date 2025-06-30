@@ -44,6 +44,7 @@ export 'package:adv_flutter/lab5/checkbox_middleware.dart';
 export 'package:adv_flutter/lab6/rxbool_show_hide.dart';
 export 'package:adv_flutter/lab5/checked_controller.dart';
 export 'package:adv_flutter/lab6/rxbool_show_hide_controller.dart';
+export 'package:adv_flutter/lab6/rx_var_demo_controller.dart';
 export 'package:adv_flutter/lab6/text_binding.dart';
 export 'package:adv_flutter/lab7/rxlist_crud_view.dart';
 export 'package:adv_flutter/lab7/rxlist_crud_Model.dart';

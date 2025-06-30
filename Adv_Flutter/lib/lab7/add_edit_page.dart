@@ -20,7 +20,10 @@ class AddEditPage extends StatelessWidget {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Colors.black87,
-        title: Text(APPBAR_ADD_EDIT_PAGE, style: TextStyle(color: Colors.white)),
+        title: Text(
+          APPBAR_ADD_EDIT_PAGE,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -28,11 +31,18 @@ class AddEditPage extends StatelessWidget {
           children: [
             TextField(
               controller: _controller.nameController,
-              decoration: InputDecoration(labelText: NAME),
+              decoration: InputDecoration(
+                labelText: NAME,
+                border: OutlineInputBorder(),
+              ),
             ),
+            SizedBox(height: 20),
             TextField(
               controller: _controller.emailController,
-              decoration: InputDecoration(labelText: EMAIL),
+              decoration: InputDecoration(
+                labelText: EMAIL,
+                border: OutlineInputBorder(),
+              ),
             ),
             SizedBox(height: 20),
             ElevatedButton(

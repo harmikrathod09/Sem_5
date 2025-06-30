@@ -1,4 +1,3 @@
-import 'package:adv_flutter/lab6/rx_var_demo_controller.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
