@@ -1,5 +1,4 @@
 import 'package:adv_flutter/utils/import_export.dart';
-import 'package:get/get.dart';
 
 class CustomDialoge extends StatelessWidget {
   const CustomDialoge({super.key});

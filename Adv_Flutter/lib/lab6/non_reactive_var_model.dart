@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+
 class NonReactiveVarModel{
   int _count=0;
 
