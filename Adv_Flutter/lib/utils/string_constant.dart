@@ -20,6 +20,9 @@ const String RX_STRING_APPBAR="TextField RxString Realtime Change";
 const String FIRST_MIDDLEWARE_PAGE_VIEW_APPBAR="First Page Middleware ";
 const String SECOND_MIDDLEWARE_PAGE_VIEW_APPBAR="Second Page Middleware ";
 const String RXBOOL_SHOW_HIDE_APPBAR="RxBool Show/Hide";
+const String APPBAR_RXLIST_CRUD="Rxlist Crud";
+const String APPBAR_ADD_EDIT_PAGE="Add/Edit Page";
+const String APPBAR_FAV_PAGE="Favorite Users";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -170,4 +173,16 @@ const String TYPE_HERE='Type Here';
 const String YOU_TYPED='You Typed: ';
 const String VISIBLE='I am visible!';
 const String RXSTRING_HIDE_SHOW="/RxstringHideShow";
+//endregion
+
+
+//region LAB7
+const String RXLIST_CRUD="/RxlistCrud";
+const String RXLIST_ADD_EDIT="/RxlistAddEdit";
+const String RXLIST_FAV="/Favorite";
+const String NAME="Name";
+const String EMAIL="Email";
+const String IS_FAV="isFavorite";
+const String NO_USER="No users added yet.";
+const String NO_FAV_USER="No favorite users yet.";
 //endregion

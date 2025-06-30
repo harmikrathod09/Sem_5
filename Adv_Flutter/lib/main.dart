@@ -19,15 +19,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: RXSTRING_HIDE_SHOW,
-      initialBinding: TextBinding(),
+      initialRoute: RXLIST_CRUD,
+      // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
         GetPage(name: NAV_SECOND_PAGE, page: () => SecondPageNamedRoute()),
         GetPage(name: FIRST_MIDDLEWARE_PAGE, page: ()=>FirstMiddlepageView()),
         GetPage(name: SECOND_MIDDLEWARE_PAGE, page: ()=>SecondMiddlewareView(), middlewares: [CheckboxMiddleware()]),
         GetPage(name: RXSTRING_HIDE_SHOW, page: ()=>TextBindingPage()),
-
+        GetPage(name: RXLIST_CRUD, page: () => RxlistCrudView()),
+        GetPage(name: RXLIST_ADD_EDIT, page: () => AddEditPage()),
+        GetPage(name: RXLIST_FAV, page: () => FavoriteUsersView()),
       ],
     );
   }

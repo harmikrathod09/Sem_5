@@ -45,3 +45,8 @@ export 'package:adv_flutter/lab6/rxbool_show_hide.dart';
 export 'package:adv_flutter/lab5/checked_controller.dart';
 export 'package:adv_flutter/lab6/rxbool_show_hide_controller.dart';
 export 'package:adv_flutter/lab6/text_binding.dart';
+export 'package:adv_flutter/lab7/rxlist_crud_view.dart';
+export 'package:adv_flutter/lab7/rxlist_crud_Model.dart';
+export 'package:adv_flutter/lab7/rxlist_crud_controller.dart';
+export 'package:adv_flutter/lab7/add_edit_page.dart';
+export 'package:adv_flutter/lab7/fav_user_view.dart';
