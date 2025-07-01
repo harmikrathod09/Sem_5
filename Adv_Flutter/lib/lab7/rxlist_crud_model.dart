@@ -3,7 +3,7 @@ import 'package:adv_flutter/utils/import_export.dart';
 class RxlistCrudModel {
   String name;
   String email;
-  bool isFavorite; // New field
+  bool isFavorite;
 
   RxlistCrudModel({
     required this.name,

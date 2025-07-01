@@ -186,3 +186,18 @@ const String IS_FAV="isFavorite";
 const String NO_USER="No users added yet.";
 const String NO_FAV_USER="No favorite users yet.";
 //endregion
+
+//region LAB9
+const String DB_STUDENT="Student.db";
+const String TBL_STUDENT="TBL_Student";
+const int STUDENT_DB_VERSION=1;
+const String COL_STUDENT_ID="sid";
+const String COL_STUDENT_FNAME="fname";
+const String COL_STUDENT_LNAME="lname";
+const String COL_STUDENT_ENO="enrollment_no";
+const String COL_STUDENT_EMAIL="email";
+const String COL_STUDENT_PHONE="phone";
+const String COL_STUDENT_BRANCH="branch";
+const String COL_STUDENT_CGPA="cgpa";
+const String COL_STUDENT_DIPL_CGPA="dipl_cgpa";
+//endregion
