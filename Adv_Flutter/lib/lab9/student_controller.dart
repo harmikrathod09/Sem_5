@@ -6,6 +6,12 @@ class StudentController{
   late Database db;
   GlobalKey<FormState> formKey=GlobalKey();
 
-
-
+  var fnameController=TextEditingController();
+  var lnameController=TextEditingController();
+  var enoController=TextEditingController();
+  var emailController=TextEditingController();
+  var phoneController=TextEditingController();
+  var branchConroller=TextEditingController();
+  var cgpaController=TextEditingController();
+  var diplcgpaController=TextEditingController();
 }

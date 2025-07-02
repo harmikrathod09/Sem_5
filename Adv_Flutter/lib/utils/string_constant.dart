@@ -200,4 +200,5 @@ const String COL_STUDENT_PHONE="phone";
 const String COL_STUDENT_BRANCH="branch";
 const String COL_STUDENT_CGPA="cgpa";
 const String COL_STUDENT_DIPL_CGPA="dipl_cgpa";
+const String COMPUTER_SCIENCE_AND_ENGINEERING="Computer Science and Engineering";
 //endregion
