@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#define N 100
+#define N 100000
 
 void max_heapify(int arr[], int n, int i)
 {
@@ -76,7 +76,7 @@ void main()
   int arr[N];
     clock_t start, end;
     double time_taken;
-    if (readFile("../Arrays/best_case_100.txt", arr, N))
+    if (readFile("../Arrays/best_case_100000.txt", arr, N))
     {
         start = clock();
         heapSort(arr, N);
@@ -85,7 +85,7 @@ void main()
         printf("Best case of Element %d is %f\n", N, time_taken);
     }
 
-    if (readFile("../Arrays/average_case_100.txt", arr, N))
+    if (readFile("../Arrays/average_case_100000.txt", arr, N))
     {
         start = clock();
         heapSort(arr, N);
@@ -94,7 +94,7 @@ void main()
         printf("Average case of Element %d is %f\n", N, time_taken);
     }
 
-    if (readFile("../Arrays/worst_case_100.txt", arr, N))
+    if (readFile("../Arrays/worst_case_100000.txt", arr, N))
     {
         start = clock();
         heapSort(arr, N);
