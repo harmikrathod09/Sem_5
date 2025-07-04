@@ -1,24 +1,32 @@
 #include <stdio.h>
 #include <time.h>
-#define N 100000
 
-int linearSerach(int arr[], int ele)
+#define N 100
+int arr[N];
+
+int binarySearch(int ele, int low, int high)
 {
-    int i;
-    for (i = 0; i < N; i++)
+    int mid;
+    while (low <= high)
     {
-        if (arr[i] == ele)
+        mid = (low + high) / 2;
+        if (arr[mid] == ele)
         {
-            return i;
+            return mid;
+        }
+        else if (arr[mid] < ele)
+        {
+            return binarySearch(ele,mid + 1,high);
+        }
+        else if (arr[mid] > ele)
+        {
+            return binarySearch(ele,low, mid - 1);
         }
     }
-    if (i >= N)
-    {
-        return -1;
-    }
+    return -1;
 }
 
-int readFile(const char *filename, int arr[], int n)
+int readFile(const char *filename, int n)
 {
     FILE *f = fopen(filename, "r");
     if (!f)
@@ -28,7 +36,9 @@ int readFile(const char *filename, int arr[], int n)
     }
 
     for (int i = 0; i < n; i++)
+    {
         fscanf(f, "%d", &arr[i]);
+    }
 
     fclose(f);
     return 1;
@@ -36,16 +46,15 @@ int readFile(const char *filename, int arr[], int n)
 
 void main()
 {
-    int arr[N];
     clock_t start, end;
     double time_taken;
-    int ele, index;
-    if (readFile("../Arrays/best_case_100000.txt", arr, N))
+    int ele, index, low = 0, high = N - 1;
+    if (readFile("../Arrays/best_case_100000.txt", N))
     {
         printf("Enter a Element: ");
         scanf("%d", &ele);
         start = clock();
-        index = linearSerach(arr, ele);
+        index = binarySearch(ele, low, high);
         end = clock();
         if (index == -1)
         {
