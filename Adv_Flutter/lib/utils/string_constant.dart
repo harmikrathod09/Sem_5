@@ -23,6 +23,7 @@ const String RXBOOL_SHOW_HIDE_APPBAR="RxBool Show/Hide";
 const String APPBAR_RXLIST_CRUD="Rxlist Crud";
 const String APPBAR_ADD_EDIT_PAGE="Add/Edit Page";
 const String APPBAR_FAV_PAGE="Favorite Users";
+const String APPBAR_VIEW="View Page";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -201,4 +202,7 @@ const String COL_STUDENT_BRANCH="branch";
 const String COL_STUDENT_CGPA="cgpa";
 const String COL_STUDENT_DIPL_CGPA="dipl_cgpa";
 const String COMPUTER_SCIENCE_AND_ENGINEERING="Computer Science and Engineering";
+const String ROUTE_STUDENT_LIST = "/studentList";
+const String ROUTE_ADD_STUDENT = "/addStudent";
+const String ROUTE_EDIT_STUDENT = "/editStudent";
 //endregion

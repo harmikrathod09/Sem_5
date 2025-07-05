@@ -1,4 +1,6 @@
 
+import 'package:adv_flutter/lab9/add_edit_view.dart';
+import 'package:adv_flutter/lab9/student_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: RXLIST_CRUD,
+      initialRoute: ROUTE_STUDENT_LIST,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -30,6 +32,10 @@ class MyApp extends StatelessWidget {
         GetPage(name: RXLIST_CRUD, page: () => RxlistCrudView()),
         GetPage(name: RXLIST_ADD_EDIT, page: () => AddEditPage()),
         GetPage(name: RXLIST_FAV, page: () => FavoriteUsersView()),
+        GetPage(name: ROUTE_STUDENT_LIST, page: () => StudentView()),
+        GetPage(name: ROUTE_ADD_STUDENT, page: () => AddEditView()),
+        GetPage(name: ROUTE_EDIT_STUDENT, page: () => AddEditView()),
+
       ],
     );
   }

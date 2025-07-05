@@ -54,3 +54,5 @@ export 'package:adv_flutter/lab7/fav_user_view.dart';
 export 'package:adv_flutter/lab9/my_database.dart';
 export 'package:adv_flutter/lab9/student_model.dart';
 export 'package:adv_flutter/lab9/student_controller.dart';
+export 'package:adv_flutter/lab9/my_database.dart';
+export 'package:adv_flutter/lab9/student_repo.dart';
