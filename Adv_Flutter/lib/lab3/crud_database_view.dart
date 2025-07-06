@@ -152,7 +152,7 @@ class _CrudDatabaseViewState extends State<CrudDatabaseView> {
                               await _controller.removeUserDatabase(
                                 _userList[index][DB_ID],
                               );
-                              _userList = await _controller.readUserDatabase();  // refresh after delete
+                              _userList = await _controller.readUserDatabase();
                               setState(() {});
                             },
                             icon: Icon(Icons.delete),
