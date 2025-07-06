@@ -1,7 +1,5 @@
-import 'package:adv_flutter/utils/string_constant.dart';
-import 'package:flutter/material.dart';
+import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
-import 'package:adv_flutter/lab9/student_controller.dart';
 
 class StudentView extends StatelessWidget {
   final StudentController controller = Get.put(StudentController());
