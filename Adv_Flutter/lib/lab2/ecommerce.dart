@@ -24,6 +24,7 @@ class EcommerceDashboard extends StatelessWidget {
       appBar: AppBar(
         title: Text("E-Commerce Dashboard"),
       ),
+      
       body: Padding(
         padding: EdgeInsets.all(12),
         child: Column(
