@@ -188,7 +188,7 @@ const String NO_USER="No users added yet.";
 const String NO_FAV_USER="No favorite users yet.";
 //endregion
 
-//region LAB9
+//region LAB9_10
 const String DB_STUDENT="Student.db";
 const String TBL_STUDENT="TBL_Student";
 const int STUDENT_DB_VERSION=1;
@@ -205,4 +205,6 @@ const String COMPUTER_SCIENCE_AND_ENGINEERING="Computer Science and Engineering"
 const String ROUTE_STUDENT_LIST = "/studentList";
 const String ROUTE_ADD_STUDENT = "/addStudent";
 const String ROUTE_EDIT_STUDENT = "/editStudent";
+const String SEARCH_HERE="Search Here";
 //endregion
+

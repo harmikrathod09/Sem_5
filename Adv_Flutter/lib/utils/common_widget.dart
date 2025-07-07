@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'import_export.dart';
 
 class CommonWidget {
-  Widget textField(controller, hintTxt, labelTxt) {
+  Widget textField(controller, hintTxt, labelTxt,{dynamic onChanged}) {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
@@ -11,6 +11,7 @@ class CommonWidget {
         labelText: labelTxt,
         border: OutlineInputBorder(),
       ),
+      onChanged: onChanged,
     );
   }
 

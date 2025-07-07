@@ -1,6 +1,3 @@
-
-import 'package:adv_flutter/lab9/add_edit_view.dart';
-import 'package:adv_flutter/lab9/student_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +32,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: ROUTE_STUDENT_LIST, page: () => StudentView()),
         GetPage(name: ROUTE_ADD_STUDENT, page: () => AddEditView()),
         GetPage(name: ROUTE_EDIT_STUDENT, page: () => AddEditView()),
-
       ],
     );
   }
