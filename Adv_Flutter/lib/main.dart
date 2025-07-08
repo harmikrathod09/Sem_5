@@ -1,3 +1,4 @@
+import 'package:adv_flutter/lab11/user_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: ROUTE_STUDENT_LIST,
+      initialRoute: NAV_USER_LIST,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: ROUTE_STUDENT_LIST, page: () => StudentView()),
         GetPage(name: ROUTE_ADD_STUDENT, page: () => AddEditView()),
         GetPage(name: ROUTE_EDIT_STUDENT, page: () => AddEditView()),
+        GetPage(name: NAV_USER_LIST, page: ()=>UserView())
       ],
     );
   }

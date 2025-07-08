@@ -24,6 +24,7 @@ const String APPBAR_RXLIST_CRUD="Rxlist Crud";
 const String APPBAR_ADD_EDIT_PAGE="Add/Edit Page";
 const String APPBAR_FAV_PAGE="Favorite Users";
 const String APPBAR_VIEW="View Page";
+const String APPBAR_USER_VIEW="User View";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -208,3 +209,6 @@ const String ROUTE_EDIT_STUDENT = "/editStudent";
 const String SEARCH_HERE="Search Here";
 //endregion
 
+//region LAB11_12
+const String NAV_USER_LIST="/UserList";
+//endregion
