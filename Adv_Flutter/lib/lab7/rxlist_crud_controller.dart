@@ -33,7 +33,7 @@ class RxlistCrudController extends GetxController {
       users[index] = RxlistCrudModel(
         name: nameController.text,
         email: emailController.text,
-        isFavorite: users[index].isFavorite, // keep favorite status
+        isFavorite: users[index].isFavorite,
       );
       clearControllers();
     }

@@ -102,7 +102,6 @@ class _AddEditViewState extends State<AddEditView> {
                  emailController,
                  COL_STUDENT_EMAIL,
                  COL_STUDENT_EMAIL,
-
               ),
               SizedBox(height: 12),
               _widget.textField(
@@ -143,7 +142,7 @@ class _AddEditViewState extends State<AddEditView> {
                       cgpa: double.tryParse(cgpaController.text) ?? 0.0,
                       diplCgpa: double.tryParse(diplCgpaController.text) ?? 0.0,
                     );
-                    //
+
                     // if (widget.student == null) {
                     //   controller.addStudent(newStudent);
                     //   Get.snackbar('Success', 'Student added successfully');
