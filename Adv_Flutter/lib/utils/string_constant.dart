@@ -25,6 +25,7 @@ const String APPBAR_ADD_EDIT_PAGE="Add/Edit Page";
 const String APPBAR_FAV_PAGE="Favorite Users";
 const String APPBAR_VIEW="View Page";
 const String APPBAR_USER_VIEW="User View";
+const String APPBAR_ERROR_CHECKING="Error checking";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -82,7 +83,7 @@ const String BTN_HIDE="Hide";
 //endregion
 
 //region USER MAP
-const String USER_NAME = "Name";
+// const String USER_NAME = "Name";
 const String USER_CITY = "City";
 const String USER_GENDER = "Gender";
 //endregion
@@ -189,6 +190,17 @@ const String NO_USER="No users added yet.";
 const String NO_FAV_USER="No favorite users yet.";
 //endregion
 
+//region LAB8
+const String ENTER_NO_1="Enter No1: ";
+const String ENTER_NO_2="Enter No2: ";
+const String BTN_CALCULATE="Calculate";
+const String NAV_ERROR_CHECKING_PAGE="/ErrorChecking";
+const String ERR_CAN_NOT_DIVIDE_ZERO="Can't divide by zero";
+const String ERR_PLEASE_ENTER_NO1_OR_NO2="Please Enetr No1/No2";
+const String ERR_ENTER_INTEGER_VALUE="Please Enter Integer Value";
+const String ERR_TITLE="Error!";
+//endregion
+
 //region LAB9_10
 const String DB_STUDENT="Student.db";
 const String TBL_STUDENT="TBL_Student";
@@ -211,4 +223,9 @@ const String SEARCH_HERE="Search Here";
 
 //region LAB11_12
 const String NAV_USER_LIST="/UserList";
+const String NAV_USER_ADD_EDIT="/UserAddEdit";
+const String USER_ID="id";
+const String USER_NAME="user_name";
+const String USER_EMAIL="email";
+const String USER_PHONE="phone";
 //endregion

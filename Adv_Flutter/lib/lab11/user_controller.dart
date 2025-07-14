@@ -48,9 +48,6 @@ class UserController extends GetxController {
     }
   }
 
-
-
-
   void addUser() {}
 
   void deleteUser() {}

@@ -42,6 +42,10 @@ class UserView extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: controller.getUsers,
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

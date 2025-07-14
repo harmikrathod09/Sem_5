@@ -61,4 +61,6 @@ export 'package:adv_flutter/lab9_10/add_edit_view.dart';
 export 'package:adv_flutter/lab11/user_controller.dart';
 export 'package:adv_flutter/lab11/user_model.dart';
 export 'package:adv_flutter/lab11/user_view.dart';
-
+export 'package:adv_flutter/lab11/api_user_add_edit.dart';
+export 'package:adv_flutter/Lab8/error_snack_bar.dart';
+export 'package:adv_flutter/Lab8/err_controller.dart';
