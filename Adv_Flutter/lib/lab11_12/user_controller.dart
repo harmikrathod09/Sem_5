@@ -1,4 +1,3 @@
-import 'package:adv_flutter/lab11/api/api_service.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -6,11 +5,14 @@ enum UserState { loading, success, error }
 
 class UserController extends GetxController {
   RxList<User> userList = <User>[].obs;
+  RxList<User> filteredUsers = <User>[].obs;
   Rx<UserState> state = UserState.loading.obs;
-  RxString errorMessage = ''.obs;// All fetched users
-  RxList<User> filteredUsers = <User>[].obs; // Users shown on screen
+  RxString errorMessage = ''.obs;
   RxString searchQuery = ''.obs;
 
+  final ApiService api = ApiService();
+
+  @override
   void onInit() {
     super.onInit();
     getUsers();
@@ -19,17 +21,20 @@ class UserController extends GetxController {
   void getUsers() async {
     state.value = UserState.loading;
     try {
-      final users = await ApiService().fetchUsers();
-      if (users != null && users.isNotEmpty) {
+      final users = await api.fetchUsers();
+      if (users.isNotEmpty) {
         userList.value = users;
+        filteredUsers.value = users;
         state.value = UserState.success;
       } else {
         userList.clear();
+        filteredUsers.clear();
         errorMessage.value = "No data received.";
         state.value = UserState.error;
       }
     } catch (e) {
       userList.clear();
+      filteredUsers.clear();
       errorMessage.value = e.toString();
       state.value = UserState.error;
     }
@@ -48,9 +53,30 @@ class UserController extends GetxController {
     }
   }
 
-  void addUser() {}
+  Future<void> addUser(User user) async {
+    try {
+      await api.addUser(user);
+      getUsers(); // Refresh list after add
+    } catch (e) {
+      Get.snackbar('Error', 'Failed to add user');
+    }
+  }
 
-  void deleteUser() {}
+  Future<void> editUser(User updatedUser) async {
+    try {
+      await api.updateUser(updatedUser);
+      getUsers(); // Refresh list after update
+    } catch (e) {
+      Get.snackbar('Error', 'Failed to update user');
+    }
+  }
 
-  void editUser() {}
+  Future<void> deleteUser(String id) async {
+    try {
+      await api.deleteUser(id);
+      getUsers(); // Refresh list after delete
+    } catch (e) {
+      Get.snackbar('Error', 'Failed to delete user');
+    }
+  }
 }

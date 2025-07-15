@@ -228,4 +228,5 @@ const String USER_ID="id";
 const String USER_NAME="user_name";
 const String USER_EMAIL="email";
 const String USER_PHONE="phone";
+const String ERR_USER_NOT_FOUND="User Not found";
 //endregion
