@@ -26,6 +26,7 @@ const String APPBAR_FAV_PAGE="Favorite Users";
 const String APPBAR_VIEW="View Page";
 const String APPBAR_USER_VIEW="User View";
 const String APPBAR_ERROR_CHECKING="Error checking";
+const String APPBAR_TODO_LIST="Todo List";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -229,4 +230,8 @@ const String USER_NAME="user_name";
 const String USER_EMAIL="email";
 const String USER_PHONE="phone";
 const String ERR_USER_NOT_FOUND="User Not found";
+//endregion
+
+//region LAB12_TODO
+const String NAV_TODO_VIEW="/todoView";
 //endregion

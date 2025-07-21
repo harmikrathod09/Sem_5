@@ -1,4 +1,4 @@
-
+import 'package:adv_flutter/lab12_to_do/todo_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -19,23 +19,28 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_USER_LIST,
+      initialRoute: NAV_TODO_VIEW,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
         GetPage(name: NAV_SECOND_PAGE, page: () => SecondPageNamedRoute()),
-        GetPage(name: FIRST_MIDDLEWARE_PAGE, page: ()=>FirstMiddlepageView()),
-        GetPage(name: SECOND_MIDDLEWARE_PAGE, page: ()=>SecondMiddlewareView(), middlewares: [CheckboxMiddleware()]),
-        GetPage(name: RXSTRING_HIDE_SHOW, page: ()=>TextBindingPage()),
+        GetPage(name: FIRST_MIDDLEWARE_PAGE, page: () => FirstMiddlepageView()),
+        GetPage(
+          name: SECOND_MIDDLEWARE_PAGE,
+          page: () => SecondMiddlewareView(),
+          middlewares: [CheckboxMiddleware()],
+        ),
+        GetPage(name: RXSTRING_HIDE_SHOW, page: () => TextBindingPage()),
         GetPage(name: RXLIST_CRUD, page: () => RxlistCrudView()),
         GetPage(name: RXLIST_ADD_EDIT, page: () => AddEditPage()),
         GetPage(name: RXLIST_FAV, page: () => FavoriteUsersView()),
         GetPage(name: ROUTE_STUDENT_LIST, page: () => StudentView()),
         GetPage(name: ROUTE_ADD_STUDENT, page: () => AddEditView()),
         GetPage(name: ROUTE_EDIT_STUDENT, page: () => AddEditView()),
-        GetPage(name: NAV_USER_LIST, page: ()=>UserView()),
-        GetPage(name: NAV_USER_ADD_EDIT, page: ()=>UserFormView()),
-        GetPage(name: NAV_ERROR_CHECKING_PAGE, page: ()=>ErrorSnackBar()),
+        GetPage(name: NAV_USER_LIST, page: () => UserView()),
+        GetPage(name: NAV_USER_ADD_EDIT, page: () => UserFormView()),
+        GetPage(name: NAV_ERROR_CHECKING_PAGE, page: () => ErrorSnackBar()),
+        GetPage(name: NAV_TODO_VIEW, page: () => TodoListScreen()),
       ],
     );
   }

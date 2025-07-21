@@ -65,3 +65,6 @@ export 'package:adv_flutter/lab11_12/api_user_add_edit.dart';
 export 'package:adv_flutter/lab11_12/api/api_service.dart';
 export 'package:adv_flutter/Lab8/error_snack_bar.dart';
 export 'package:adv_flutter/Lab8/err_controller.dart';
+export 'package:adv_flutter/lab12_to_do/todo_model.dart';
+export 'package:adv_flutter/lab12_to_do/api/todo_repository.dart';
+export 'package:adv_flutter/lab12_to_do/todo_view.dart';
