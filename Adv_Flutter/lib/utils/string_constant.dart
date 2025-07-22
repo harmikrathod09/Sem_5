@@ -27,6 +27,8 @@ const String APPBAR_VIEW="View Page";
 const String APPBAR_USER_VIEW="User View";
 const String APPBAR_ERROR_CHECKING="Error checking";
 const String APPBAR_TODO_LIST="Todo List";
+const String APPBAR_ASYNC_VIEW="Async View";
+const String APPBAR_AGE_CHECKER="Age Checker";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -234,4 +236,13 @@ const String ERR_USER_NOT_FOUND="User Not found";
 
 //region LAB12_TODO
 const String NAV_TODO_VIEW="/todoView";
+//endregion
+
+//region LAB13
+const String NAV_ASYNC="/asyncPage";
+const String NAV_AGE_CHECKER="/ageChecker";
+const String FETCHING_SUCCESS="Fetching Success";
+const String FETCHING_ERR="Fetch (Throw Error)";
+const String ENTER_AGE="Enter Age";
+const String CHECK_AGE="Check Age";
 //endregion

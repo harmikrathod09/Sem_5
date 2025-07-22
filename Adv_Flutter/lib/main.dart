@@ -1,4 +1,3 @@
-import 'package:adv_flutter/lab12_to_do/todo_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_TODO_VIEW,
+      initialRoute: NAV_AGE_CHECKER,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -41,6 +40,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_USER_ADD_EDIT, page: () => UserFormView()),
         GetPage(name: NAV_ERROR_CHECKING_PAGE, page: () => ErrorSnackBar()),
         GetPage(name: NAV_TODO_VIEW, page: () => TodoListScreen()),
+        GetPage(name: NAV_ASYNC, page: () => AsyncView()),
+        GetPage(name: NAV_AGE_CHECKER, page: () => AgeCheckerView()),
       ],
     );
   }

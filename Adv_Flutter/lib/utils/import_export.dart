@@ -68,3 +68,7 @@ export 'package:adv_flutter/Lab8/err_controller.dart';
 export 'package:adv_flutter/lab12_to_do/todo_model.dart';
 export 'package:adv_flutter/lab12_to_do/api/todo_repository.dart';
 export 'package:adv_flutter/lab12_to_do/todo_view.dart';
+export 'package:adv_flutter/lab13/age_controller.dart';
+export 'package:adv_flutter/lab13/async_controller.dart';
+export 'package:adv_flutter/lab13/async_view.dart';
+export 'package:adv_flutter/lab13/age_view.dart';
