@@ -1,0 +1,98 @@
+write a code to detect the color of the object, if the object is withon 50cm
+
+#define s0 9
+#define s1 8
+#define s2 11
+#define s3 12
+#define OUT 10
+
+#define TRI 6
+#define ECHO 7
+
+int redFrequency =0;
+int greenFrequency =0;
+int blueFrequency =0;
+
+long duration;
+float distance;
+
+
+void loop(){
+Serial.begin(9600);
+pinMode(s0, OUTPUT);
+pinMode(s1, OUTPUT);
+pinMode(s2, OUTPUT);
+pinMode(s3, OUTPUT);
+pinMode(OUT , INPUT);
+
+pinMode(TRI, OUTPUT);
+pinMode(ECHO , OUTPUT);
+
+digitalWrite(s0, HIGH);
+digitalWrite(s1, HIGH);
+}
+
+void loop(){
+distance=getDistance();
+
+if(distance <= 50){
+redColor();
+detectColor();
+}
+else{
+Serial.println("No object within 50cm");
+}
+
+delay(500);
+}
+
+void getDustance(){
+digtalWrite(TRIG,LOW);
+delay(200);
+digtalWrite(s2,HIGH);
+delay(200);
+
+duration = pulseIn(ECHO, HIGH);
+return duration * 0.034 / 2;
+}
+
+void readColor() {
+  // RED
+  digitalWrite(S2, LOW);
+  digitalWrite(S3, LOW);
+  redFrequency = pulseIn(OUT, LOW);
+  redFrequency = map(redFrequency, 10, 60, 255, 0);
+
+  // GREEN
+  digitalWrite(S2, HIGH);
+  digitalWrite(S3, HIGH);
+  greenFrequency = pulseIn(OUT, LOW);
+  greenFrequency = map(greenFrequency, 10, 60, 255, 0);
+
+  // BLUE
+  digitalWrite(S2, LOW);
+  digitalWrite(S3, HIGH);
+  blueFrequency = pulseIn(OUT, LOW);
+  blueFrequency = map(blueFrequency, 10, 60, 255, 0);
+
+  Serial.print("R: "); Serial.print(redFrequency);
+  Serial.print(" G: "); Serial.print(greenFrequency);
+  Serial.print(" B: "); Serial.println(blueFrequency);
+}
+
+// Function to detect and print color name
+void detectColor() {
+  if (redFrequency > greenFrequency && redFrequency > blueFrequency) {
+    Serial.println("Detected Color: RED");
+  } 
+  else if (greenFrequency > redFrequency && greenFrequency > blueFrequency) {
+    Serial.println("Detected Color: GREEN");
+  } 
+  else if (blueFrequency > redFrequency && blueFrequency > greenFrequency) {
+    Serial.println("Detected Color: BLUE");
+  } 
+  else {
+    Serial.println("Detected Color: UNKNOWN/WHITE");
+  }
+}
+How it

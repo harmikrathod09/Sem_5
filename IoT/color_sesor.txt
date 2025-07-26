@@ -1,0 +1,40 @@
+// Green color detection with TCS3200 sensor
+
+#define s0 9
+#define s1 8
+#define s2 11
+#define s3 12
+#define out 10
+
+int frequency = 0;
+
+void setup() {
+  pinMode(s0, OUTPUT);
+  pinMode(s1, OUTPUT);
+  pinMode(s2, OUTPUT);
+  pinMode(s3, OUTPUT);
+  pinMode(out, INPUT);
+
+  Serial.begin(9600);
+
+  // Set frequency scaling to 100%
+  digitalWrite(s0, HIGH);
+  digitalWrite(s1, HIGH);
+}
+
+void loop() {
+  // Select green filter
+  digitalWrite(s2, HIGH);
+  digitalWrite(s3, HIGH);
+
+  // Measure frequency
+  frequency = pulseIn(out, LOW);
+
+  // Map frequency to 0-255 range (adjust these values based on calibration)
+  frequency = map(frequency, 10, 56, 255, 0);
+
+  Serial.print("G = ");
+  Serial.println(frequency);
+
+  delay(100);
+}
