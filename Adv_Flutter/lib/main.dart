@@ -1,3 +1,4 @@
+import 'package:adv_flutter/lab14/pub_check.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_AGE_CHECKER,
+      initialRoute: NAV_CHECK_PUB,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_TODO_VIEW, page: () => TodoListScreen()),
         GetPage(name: NAV_ASYNC, page: () => AsyncView()),
         GetPage(name: NAV_AGE_CHECKER, page: () => AgeCheckerView()),
+        GetPage(name: NAV_CHECK_PUB, page: ()=>PubCheck())
       ],
     );
   }

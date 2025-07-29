@@ -246,3 +246,7 @@ const String FETCHING_ERR="Fetch (Throw Error)";
 const String ENTER_AGE="Enter Age";
 const String CHECK_AGE="Check Age";
 //endregion
+
+//region LAB14
+const String NAV_CHECK_PUB="/pub-check";
+//endregion
