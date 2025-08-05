@@ -1,0 +1,3 @@
+#define SECRET_DEVICE_KEY "X72tf4DROqLgoFf8mYgFWrpIy"
+#define SECRET_OPTIONAL_PASS "dietdu@2024"
+#define SECRET_SSID "A-308"

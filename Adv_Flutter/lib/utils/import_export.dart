@@ -72,3 +72,5 @@ export 'package:adv_flutter/lab13/age_controller.dart';
 export 'package:adv_flutter/lab13/async_controller.dart';
 export 'package:adv_flutter/lab13/async_view.dart';
 export 'package:adv_flutter/lab13/age_view.dart';
+export 'package:adv_flutter/lab15/camera_permission.dart';
+export 'package:permission_handler/permission_handler.dart';

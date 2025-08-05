@@ -29,6 +29,9 @@ const String APPBAR_ERROR_CHECKING="Error checking";
 const String APPBAR_TODO_LIST="Todo List";
 const String APPBAR_ASYNC_VIEW="Async View";
 const String APPBAR_AGE_CHECKER="Age Checker";
+const String APPBAR_CAMERA_PERMISSION="Camera Permission";
+const String APPBAR_LOCATION_PERMISSION="Location Permission";
+const String APPBAR_FILE_PERMISSION="File read/write Permission";
 //endregion
 
 //region PROFILECARD HINT TEXT FORM CONSTANT
@@ -249,4 +252,16 @@ const String CHECK_AGE="Check Age";
 
 //region LAB14
 const String NAV_CHECK_PUB="/pub-check";
+//endregion
+
+//region LAB15
+const String NAV_CAMERA_PERMISSION="/camera-permission";
+const String CAMERA_PERMISSION_CENTER_TXT="Press floating btn to open camera pemission pop up";
+const String NAV_LOCATION_PERMISSION="/location-permission";
+const String LOCATION_PERMISSION_CENTER_TXT="Press floating btn to open location pemission pop up";
+const String NAV_FILE_PERMISSION="/file-permission";
+const String FILE_PERMISSION_CENTER_TXT="Press floating btn to open file pemission pop up";
+const String TITLE_PERMISSION="Permission";
+const String SUBTITLE_PERMISSION_DENIDED="Permission is Denided";
+const String SUBTITLE_PERMISSION_GRANTED="Permission is Granted";
 //endregion
