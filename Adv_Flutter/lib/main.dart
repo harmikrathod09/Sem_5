@@ -1,7 +1,9 @@
 import 'package:adv_flutter/lab14/pub_check.dart';
-import 'package:adv_flutter/lab15/camera_permission.dart';
-import 'package:adv_flutter/lab15/file_permission.dart';
-import 'package:adv_flutter/lab15/location_permission.dart';
+
+import 'package:adv_flutter/lab15_16/camera_permission.dart';
+import 'package:adv_flutter/lab15_16/file_permission.dart';
+import 'package:adv_flutter/lab15_16/location_permission.dart';
+import 'package:adv_flutter/lab15_16/read_data_from_external_storage.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_FILE_PERMISSION ,
+      initialRoute: NAV_READ_DATA_FROM_EXTERNAL_STORAGE ,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -49,7 +51,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_CHECK_PUB, page: () => PubCheck()),
         GetPage(name: NAV_CAMERA_PERMISSION, page: () => CameraPermission()),
         GetPage(name: NAV_LOCATION_PERMISSION, page: () => LocationPermission()),
-        GetPage(name: NAV_FILE_PERMISSION, page: ()=>FilePermission())
+        GetPage(name: NAV_FILE_PERMISSION, page: ()=>FilePermission()),
+        GetPage(name: NAV_READ_DATA_FROM_EXTERNAL_STORAGE, page: ()=>FileReadExample()),
       ],
     );
   }

@@ -254,7 +254,7 @@ const String CHECK_AGE="Check Age";
 const String NAV_CHECK_PUB="/pub-check";
 //endregion
 
-//region LAB15
+//region LAB15_16
 const String NAV_CAMERA_PERMISSION="/camera-permission";
 const String CAMERA_PERMISSION_CENTER_TXT="Press floating btn to open camera pemission pop up";
 const String NAV_LOCATION_PERMISSION="/location-permission";
@@ -264,4 +264,6 @@ const String FILE_PERMISSION_CENTER_TXT="Press floating btn to open file pemissi
 const String TITLE_PERMISSION="Permission";
 const String SUBTITLE_PERMISSION_DENIDED="Permission is Denided";
 const String SUBTITLE_PERMISSION_GRANTED="Permission is Granted";
+const String APPBAR_READ_DATA_FROM_EXTERNAL_STORAGE="Read Data From External Storage";
+const String NAV_READ_DATA_FROM_EXTERNAL_STORAGE="/read-data-from-external-storage";
 //endregion
