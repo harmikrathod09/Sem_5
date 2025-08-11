@@ -267,3 +267,7 @@ const String SUBTITLE_PERMISSION_GRANTED="Permission is Granted";
 const String APPBAR_READ_DATA_FROM_EXTERNAL_STORAGE="Read Data From External Storage";
 const String NAV_READ_DATA_FROM_EXTERNAL_STORAGE="/read-data-from-external-storage";
 //endregion
+
+//region LAB17
+const String NAV_DISPLAY_WIDTH_HEIGHT="/display-height-width";
+//endregion

@@ -4,6 +4,7 @@ import 'package:adv_flutter/lab15_16/camera_permission.dart';
 import 'package:adv_flutter/lab15_16/file_permission.dart';
 import 'package:adv_flutter/lab15_16/location_permission.dart';
 import 'package:adv_flutter/lab15_16/read_data_from_external_storage.dart';
+import 'package:adv_flutter/lab17/display_width_height.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_READ_DATA_FROM_EXTERNAL_STORAGE ,
+      initialRoute: NAV_DISPLAY_WIDTH_HEIGHT ,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_LOCATION_PERMISSION, page: () => LocationPermission()),
         GetPage(name: NAV_FILE_PERMISSION, page: ()=>FilePermission()),
         GetPage(name: NAV_READ_DATA_FROM_EXTERNAL_STORAGE, page: ()=>FileReadExample()),
+        GetPage(name: NAV_DISPLAY_WIDTH_HEIGHT, page: ()=>DisplayWidthHeight()),
       ],
     );
   }
