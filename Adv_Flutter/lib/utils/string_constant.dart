@@ -270,4 +270,6 @@ const String NAV_READ_DATA_FROM_EXTERNAL_STORAGE="/read-data-from-external-stora
 
 //region LAB17
 const String NAV_DISPLAY_WIDTH_HEIGHT="/display-height-width";
+const String NAV_COLOR_BASED_WEB_APP="/color-based-web-app";
+const String NAV_MEDIA_QUERY_PADDING="/media-query-padding";
 //endregion
