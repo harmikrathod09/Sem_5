@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "DIJSTRA.C": "cpp",
+        "limits.h": "c"
+    }
+}
