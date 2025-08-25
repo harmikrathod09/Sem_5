@@ -273,3 +273,10 @@ const String NAV_DISPLAY_WIDTH_HEIGHT="/display-height-width";
 const String NAV_COLOR_BASED_WEB_APP="/color-based-web-app";
 const String NAV_MEDIA_QUERY_PADDING="/media-query-padding";
 //endregion
+
+//region LAB18
+const String APPBAR_RESPONSIVE_GRID="Responsive Grid";
+const String NAV_RESPONSIVE_GRID="/responsive-grid";
+const String NAV_DIFFERENT_WIDGET="/different-widget";
+const String APPBAR_DIFFERENT_WIDGET="Different Widget";
+//endregion
