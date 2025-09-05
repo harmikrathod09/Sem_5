@@ -9,9 +9,14 @@ import 'package:adv_flutter/lab17/display_width_height.dart';
 import 'package:adv_flutter/lab17/media_query_padding.dart';
 import 'package:adv_flutter/lab18/responsive_grid_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 
-void main() {
+import 'lab20/user_list_firebase_view.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   Get.put(NevigationDataTransferController());
   runApp(MyApp());
 }
@@ -28,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_DIFFERENT_WIDGET ,
+      initialRoute: "/firebase-database" ,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -62,6 +67,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_MEDIA_QUERY_PADDING, page: ()=>MediaQueryPadding()),
         GetPage(name: NAV_RESPONSIVE_GRID, page: ()=>ResponsiveGridView()),
         GetPage(name: NAV_DIFFERENT_WIDGET, page: ()=>DifferentWidgetView()),
+        GetPage(name: "/firebase-database", page: ()=>UserViewFirebase())
       ],
     );
   }
