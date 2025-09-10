@@ -280,3 +280,8 @@ const String NAV_RESPONSIVE_GRID="/responsive-grid";
 const String NAV_DIFFERENT_WIDGET="/different-widget";
 const String APPBAR_DIFFERENT_WIDGET="Different Widget";
 //endregion
+
+
+//region LAB24
+const String NAV_ANIMATED_MAP="/animated-map";
+//endregion

@@ -1,5 +1,5 @@
+import 'package:adv_flutter/firebase_options.dart';
 import 'package:adv_flutter/lab14/pub_check.dart';
-
 import 'package:adv_flutter/lab15_16/camera_permission.dart';
 import 'package:adv_flutter/lab15_16/file_permission.dart';
 import 'package:adv_flutter/lab15_16/location_permission.dart';
@@ -8,6 +8,7 @@ import 'package:adv_flutter/lab17/color_base_web_app.dart';
 import 'package:adv_flutter/lab17/display_width_height.dart';
 import 'package:adv_flutter/lab17/media_query_padding.dart';
 import 'package:adv_flutter/lab18/responsive_grid_view.dart';
+import 'package:adv_flutter/lab24/google_map.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
@@ -16,8 +17,7 @@ import 'lab20/user_list_firebase_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  Get.put(NevigationDataTransferController());
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MyApp());
 }
 
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: "/firebase-database" ,
+      initialRoute: NAV_ANIMATED_MAP,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -67,7 +67,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_MEDIA_QUERY_PADDING, page: ()=>MediaQueryPadding()),
         GetPage(name: NAV_RESPONSIVE_GRID, page: ()=>ResponsiveGridView()),
         GetPage(name: NAV_DIFFERENT_WIDGET, page: ()=>DifferentWidgetView()),
-        GetPage(name: "/firebase-database", page: ()=>UserViewFirebase())
+        GetPage(name: "/firebase-database", page: ()=>UserViewFirebase()),
+        GetPage(name: NAV_ANIMATED_MAP, page: ()=>AnimatedMarkerMap())
       ],
     );
   }
