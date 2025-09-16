@@ -285,3 +285,7 @@ const String APPBAR_DIFFERENT_WIDGET="Different Widget";
 //region LAB24
 const String NAV_ANIMATED_MAP="/animated-map";
 //endregion
+
+//region LAB26
+const String NAV_ANIMATION="/animation";
+//endregion

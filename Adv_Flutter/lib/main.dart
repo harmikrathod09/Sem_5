@@ -9,6 +9,7 @@ import 'package:adv_flutter/lab17/display_width_height.dart';
 import 'package:adv_flutter/lab17/media_query_padding.dart';
 import 'package:adv_flutter/lab18/responsive_grid_view.dart';
 import 'package:adv_flutter/lab24/google_map.dart';
+import 'package:adv_flutter/lab26/animation_view.dart';
 import 'package:adv_flutter/utils/import_export.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: RxboolShowHide(),
-      initialRoute: NAV_ANIMATED_MAP,
+      initialRoute: NAV_ANIMATION,
       // initialBinding: TextBinding(),
       getPages: [
         GetPage(name: NAV_FIRST_PAGE, page: () => FirstPageNamedRoute()),
@@ -68,7 +69,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: NAV_RESPONSIVE_GRID, page: ()=>ResponsiveGridView()),
         GetPage(name: NAV_DIFFERENT_WIDGET, page: ()=>DifferentWidgetView()),
         GetPage(name: "/firebase-database", page: ()=>UserViewFirebase()),
-        GetPage(name: NAV_ANIMATED_MAP, page: ()=>AnimatedMarkerMap())
+        GetPage(name: NAV_ANIMATED_MAP, page: ()=>AnimatedMarkerMap()),
+        GetPage(name: NAV_ANIMATION, page: ()=>AnimationView())
       ],
     );
   }
